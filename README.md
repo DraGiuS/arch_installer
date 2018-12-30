@@ -150,3 +150,6 @@ cd arch_installer
 [1]: https://github.com/helmuthdu/aui
 [2]: https://www.archlinux.org/download/
 [3]: https://rufus.akeo.ie/
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_large)

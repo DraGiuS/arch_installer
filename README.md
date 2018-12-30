@@ -1,4 +1,3 @@
-
 <html>
 <p align="center">
     <img src="https://cdn.iconscout.com/icon/free/png-256/linux-13-532188.png">
@@ -11,7 +10,8 @@
 </p>
    
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_shield)
+
 
  # Table of Contents
 
@@ -168,3 +168,6 @@ cd arch_installer
 [1]: https://github.com/helmuthdu/aui
 [2]: https://www.archlinux.org/download/
 [3]: https://rufus.akeo.ie/
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_large)

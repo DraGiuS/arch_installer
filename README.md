@@ -113,7 +113,7 @@ cd arch_installer
 
 * Changed default gtk theme
 
-* Alternative kernel (PF LTS)
+* Alternative kernel (Pf kernel)
 
 * Vscode config
 

@@ -127,6 +127,7 @@ cd arch_installer
 * https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD
 * https://github.com/webbrandon/Surface-Boot-Themes
 * https://github.com/bhilburn/powerlevel9k
+* https://github.com/jsalatas/plasma-pstate
 * https://github.com/Polunom/mac-inline-battery
 * https://github.com/Zren/plasma-applet-volumewin7mixer
 * https://github.com/divinae/umenu

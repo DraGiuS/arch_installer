@@ -10,8 +10,7 @@
 </p>
    
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_shield)
-
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
  # Table of Contents
 

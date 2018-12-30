@@ -633,7 +633,7 @@ install() { # {{{
 		echo "    6. $(mainmenu_item "${checklist[6]}"  'Install your favorites gog games')"
 		echo "    7. $(mainmenu_item "${checklist[7]}"  'Install translation')"
 		echo "    8. $(mainmenu_item "${checklist[8]}"  'Install base')"
-		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install pf lts kernel')"
+		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install pf latest kernel')"
 		echo "   10. $(mainmenu_item "${checklist[10]}"  'Setup dotfiles')"
 		echo "   11. $(mainmenu_item "${checklist[11]}" 'Install fonts')"
 		echo "   12. $(mainmenu_item "${checklist[12]}" 'Setup of Zsh with powerlevel9k')"

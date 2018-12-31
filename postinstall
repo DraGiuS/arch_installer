@@ -87,6 +87,7 @@ install_theme() { # {{{
         install_package 'breeze-gtk cantarell-fonts'
 	git clone https://github.com/DraGiuS/Skel
 	cd Skel
+	cp wallhaven-729362.jpg /home
 	cp wallhaven-614476.jpg /home
 	cp wallhaven-355344.png /home
 	cp wallhaven-526387.jpg /home

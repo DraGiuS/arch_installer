@@ -92,6 +92,7 @@ install_theme() { # {{{
 	cp wallhaven-355344.png /home
 	cp wallhaven-526387.jpg /home
 	cp wallhaven-728479.jpg /home
+	cp wallhaven-591780.jpg /home
 	cp alena-aenami-skylight1920.jpg /home
 	cp wallhaven-275413.jpg /home
 	cp wall.jpg /home

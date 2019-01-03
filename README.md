@@ -44,7 +44,7 @@ customizable, well maintained and have more options than my script anyway
 
 Here, the sddm theme that you will get : 
 
-<img src=https://github.com/MarianArlt/sddm-sugar-light/blob/master/Previews/Mockup.jpg width="960"/>
+<img src=https://github.com/MalditoBarbudo/solarized_sddm_theme/blob/master/solarized_sddm_theme.png width="960"/>
 
 Currently, the desktop look like this : 
 
@@ -132,7 +132,7 @@ cd arch_installer
 * https://github.com/Zren/plasma-applet-volumewin7mixer
 * https://github.com/divinae/umenu
 * https://github.com/divinae/uswitch
-* https://github.com/MarianArlt/sddm-sugar-light
+* https://github.com/MalditoBarbudo/solarized_sddm_theme
 * https://github.com/fahrud26/Conky-Themes 
 * https://github.com/arcticicestudio/nord-konsole
 * https://store.kde.org/p/1268541/

@@ -611,7 +611,6 @@ setup_android_dev() { # {{
     gpasswd -a "$USER" sdkusers
     chown -R :sdkusers /opt/android-sdk/
     chmod -R g+w /opt/android-sdk/
-    newgrp sdkusers
     $ANDROID_HOME/tools/bin/sdkmanager --licenses
     su - "$USER" -c "export ANDROID_HOME=/opt/android-sdk"
     su - "$USER" -c "$ANDROID_HOME/tools/bin/sdkmanager --licenses"

@@ -408,10 +408,10 @@ fi
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
 			wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/15.2.2-2/davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
 			pacman -U davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
-			wget https://github.com/DraGiuS/Titania-Git-PKGBUILD/releases/download/5510%40d722242/titania-git-5510-1-x86_64.pkg.tar.xz
-			pacman -U titania-git-5510-1-x86_64.pkg.tar.xz
+			wget https://github.com/DraGiuS/Titania-Git-PKGBUILD/releases/download/5565%401f089a6/titania-git-5565-1-x86_64.pkg.tar.xz
+			pacman -U titania-git-5565-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'snapd deezer cuteshapes-git buttermanager recbox-ardour-theme-git notable-bin unity-editor-beta unity-editor-beta-android slack-desktop-dark blender-2.8-git github-desktop-git overgrive mauikit-git mesen-git feedreader-git grapebite-git tomahawk-git lgogdownloader unvanquished-data unvanquished mandelbulber2-opencl-git s-tui virtualbox-beta-bin onivim-git netflix-qdesktop rpcs3-git vscodium plasma5-applets-volumewin7mixer intellij-idea-ce-eap gravit-designer-bin spiral-knights evince-no-gnome evesetup youtube-dl-gui-git ardour-git conky-lua itch-bin kwin-scripts-quarter-tiling-git gamehub-git mellowplayer streamlink-twitch-gui pamac-aur-git unityhub kdenlive-release-git yuzu-canary-git cemu' # My stuff
+			install_aur_package 'snapd deezer cuteshapes-git buttermanager recbox-ardour-theme-git notable-bin unity-editor-beta slack-desktop-dark blender-2.8-git github-desktop-git overgrive mauikit-git mesen-git feedreader-git grapebite-git tomahawk-git lgogdownloader unvanquished-data unvanquished mandelbulber2-opencl-git s-tui virtualbox-beta-bin onivim-git netflix-qdesktop rpcs3-git vscodium plasma5-applets-volumewin7mixer intellij-idea-ce-eap gravit-designer-bin spiral-knights evince-no-gnome evesetup youtube-dl-gui-git ardour-git conky-lua itch-bin kwin-scripts-quarter-tiling-git gamehub-git mellowplayer streamlink-twitch-gui pamac-aur-git unityhub kdenlive-release-git yuzu-canary-git cemu' # My stuff
                         systemctl start snapd.socket
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
                         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
@@ -600,6 +600,26 @@ setup_bumblebee() { # {{
 }
 # }}}
 
+setup_android_dev() { # {{
+    print_info 'Your are going to set up an android selection of software for developing for this platform'
+    read -p 'USER: ' USER
+    install_package 'android-sdk android-studio'
+    install_aur_package 'apkstudio-git genymotion unity-editor-beta-android'
+    
+    export ANDROID_HOME=/opt/android-sdk
+    groupadd sdkusers
+    gpasswd -a "$USER" sdkusers
+    chown -R :sdkusers /opt/android-sdk/
+    chmod -R g+w /opt/android-sdk/
+    newgrp sdkusers
+    $ANDROID_HOME/tools/bin/sdkmanager --licenses
+    su - "$USER" -c "export ANDROID_HOME=/opt/android-sdk"
+    su - "$USER" -c "$ANDROID_HOME/tools/bin/sdkmanager --licenses"
+     
+          enter_to_continue
+}	  
+# }}}
+
 ending_script() { # {{
     print_info 'Installing needed applets'
     read -p 'USER: ' USER
@@ -645,8 +665,9 @@ install() { # {{{
 		echo "   11. $(mainmenu_item "${checklist[11]}" 'Install fonts')"
 		echo "   12. $(mainmenu_item "${checklist[12]}" 'Setup of Zsh with powerlevel9k')"
 		echo "   13. $(mainmenu_item "${checklist[13]}" 'Install bumblebee for laptop')"
-		echo "   14. $(mainmenu_item "${checklist[14]}" 'Ending script')"
-		echo "   15. $(mainmenu_item "${checklist[15]}" 'Finish')"
+		echo "   14. $(mainmenu_item "${checklist[14]}" 'Set up for android development')"
+		echo "   15. $(mainmenu_item "${checklist[15]}" 'Ending script')"
+		echo "   16. $(mainmenu_item "${checklist[16]}" 'Finish')"
 		echo
 
 		read -p "Enter option (0-14): " OPTION
@@ -708,13 +729,16 @@ install() { # {{{
 			        setup_bumblebee
 				checklist[13]=1
 				;;		
-		        14)    
-			        ending_script
+			14)     setup_android_dev
 			        checklist[14]=1
 				;;
-			15)
+		        15)    
+			        ending_script
+			        checklist[15]=1
+				;;
+			16)
 				finish
-				checklist[15]=1
+				checklist[16]=1
 				;;
 			*)
 				invalid_option

@@ -93,6 +93,8 @@ cd arch_installer
 
 * Davinci Resolve and Unity Editor on the default install
 
+* You can set up your android development easily (android sdk,android studio,genymotion and licence agreement)
+
 * Changed grub, plasma, sddm, icon theme
 
 * Default setup of zsh with powerlevel9k

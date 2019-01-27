@@ -396,7 +396,7 @@ fi
 			install_package 'bluedevil' # bluetooth for KDE
 			install_package 'plasma-nm' # networkmanager for KDE
 			install_package 'plasma-pa' # pulseaudio for KDE
-			install_package 'kinfocenter' # see system information
+			install_package 'kinfocenter neofetch' # see system information
 			install_package 'spectacle' # screenshot utility
 			install_package 'kcolorchooser' # color picker on desktop screen
 			install_package 'plasma5-applets-redshift-control' # redshift applet for KDE

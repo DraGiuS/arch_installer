@@ -420,10 +420,10 @@ fi
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
 			wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/15.2.2-2/davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
 			pacman -U davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
-			wget https://github.com/DraGiuS/Titania-Git-PKGBUILD/releases/download/5565%401f089a6/titania-git-5565-1-x86_64.pkg.tar.xz
-			pacman -U titania-git-5565-1-x86_64.pkg.tar.xz
+                        wget https://github.com/DraGiuS/Titania-Git-PKGBUILD/releases/download/5742%402410c5a/titania-git-5742-1-x86_64.pkg.tar.xz
+                        pacman -U titania-git-5742-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'snapd redict-git deezer musikwave-git thunderbird-appmenu birdtray phoronix-test-suite-git buttermanager recbox-ardour-theme-git notable-bin unity-editor-beta slack-desktop-dark blender-2.8-git github-desktop-git mauikit-git mesen-git feedreader-git grapebite-git lgogdownloader unvanquished-data unvanquished mandelbulber2-opencl-git s-tui virtualbox-beta-bin onivim-git netflix-qdesktop rpcs3-git vscodium plasma5-applets-volumewin7mixer wingide-personal gravit-designer-bin spiral-knights evince-no-gnome evesetup youtube-dl-gui-git ardour-git conky-lua itch-bin kwin-scripts-quarter-tiling-git gamehub-git streamlink-twitch-gui pamac-aur-git unityhub yuzu-canary-git cemu' # My stuff
+			install_aur_package 'snapd redict-git igdm deezer musikwave-git thunderbird-appmenu birdtray phoronix-test-suite-git buttermanager recbox-ardour-theme-git notable-bin unity-editor-beta slack-desktop-dark blender-2.8-git github-desktop-git mauikit-git mesen-git feedreader-git grapebite-git lgogdownloader unvanquished-data unvanquished mandelbulber2-opencl-git s-tui virtualbox-beta-bin onivim-git netflix-qdesktop rpcs3-git vscodium plasma5-applets-volumewin7mixer wingide-personal gravit-designer-bin spiral-knights evince-no-gnome evesetup youtube-dl-gui-git ardour-git conky-lua itch-bin kwin-scripts-quarter-tiling-git gamehub-git streamlink-twitch-gui pamac-aur-git unityhub yuzu-canary-git cemu' # My stuff
                         systemctl start snapd.socket
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
                         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 

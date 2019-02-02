@@ -88,6 +88,12 @@ install_theme() { # {{{
 	git clone https://github.com/DraGiuS/Skel
 	cd Skel
 	cp wallhaven-729362.jpg /home
+	cp CJGvajk.jpg /home
+	cp NBk6DnZ.png /home
+	cp WP_Constructed_XIII-2560x1440_00000.jpg /home
+	cp WP_Hydrometry_III-2560x1440_00000.jpg /home
+	cp WP_Staggitarius-2560x1440_00000.jpg /home
+	cp wallhaven-674454.jpg /home
 	cp wallhaven-614476.jpg /home
 	cp wallhaven-355344.png /home
 	cp wallhaven-526387.jpg /home

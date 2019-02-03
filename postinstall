@@ -638,41 +638,42 @@ ending_script() { # {{
     cd /home/"$USER"/
     mkdir flatpak
     cd flatpak
-                        flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
-			flatpak install flathub fr.natron.Natron
-			flatpak install flathub org.gnome.Sdk/x86_64/3.30
-			git clone https://github.com/DraGiuS/ephemeral-flatpak
-			cd ephemeral-flatpak
-			flatpak-builder --user --install build com.github.cassidyjames.ephemeral.json --force-clean --arch=x86_64
-			cd ..
-			git clone https://gitlab.com/Preisschild/popcorntime-flatpak
-			cd popcorntime-flatpak
-                        flatpak-builder --install --install-deps-from=flathub popcorntime sh.popcorntime.PopcornTime.yml
-			cd ..
-			git clone https://github.com/scx/hexoeditor-flatpak
-			cd hexoeditor-flatpak
-                        flatpak-builder --repo="repo" --force-clean "build" "com.github.zhuzhuyule.HexoEditor.yaml"	
-			flatpak remote-add --no-gpg-verify "hexoeditor" "repo"
-			flatpak install "hexoeditor" "com.github.zhuzhuyule.HexoEditor"
-                        cd ..
-			flatpak install flathub  org.kde.Sdk/x86_64/5.11 
-                        git clone https://github.com/user5145/com.tibia.Client-flatpak
-			cd com.tibia.Client-flatpak
-			flatpak-builder --force-clean --install builds com.tibia.Client.yml
-			cd ..
-                        flatpak install flathub org.freedesktop.Sdk/x86_64/18.08 
-			flatpak install flathub org.electronjs.Electron2.BaseApp/x86_64/18.08
-			git clone https://github.com/jirutka/com.meetfranz.Franz
-			cd com.meetfranz.Franz
-			flatpak-builder --install build com.meetfranz.Franz.json --force-clean --arch=x86_64
-			cd ..
-			git clone https://github.com/Taiko2k/tauonmb-flatpak
-			cd tauonmb-flatpak 
-			flatpak-builder --install build com.github.taiko2k.tauonmb.json --force-clean --arch=x86_64
-			cd ..
-			flatpak install flathub org.phoenicis.playonlinux
-                        flatpak install flathub com.github.calo001.fondo
-			flatpak install flathub com.gitlab.coringao.cavestory-nx 
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
+    flatpak install flathub fr.natron.Natron
+    flatpak install flathub org.gnome.Sdk/x86_64/3.30
+    git clone https://github.com/DraGiuS/ephemeral-flatpak
+    cd ephemeral-flatpak
+    flatpak-builder --user --install build com.github.cassidyjames.ephemeral.json --force-clean --arch=x86_64
+    cd ..
+    git clone https://gitlab.com/Preisschild/popcorntime-flatpak
+    cd popcorntime-flatpak
+    flatpak-builder --install --install-deps-from=flathub popcorntime sh.popcorntime.PopcornTime.yml
+    cd ..
+    git clone https://github.com/scx/hexoeditor-flatpak
+    cd hexoeditor-flatpak
+    flatpak-builder --repo="repo" --force-clean "build" "com.github.zhuzhuyule.HexoEditor.yaml"	
+    flatpak remote-add --no-gpg-verify "hexoeditor" "repo"
+    flatpak install "hexoeditor" "com.github.zhuzhuyule.HexoEditor"
+    cd ..
+    flatpak install flathub  org.kde.Sdk/x86_64/5.11 
+    flatpak install flathub  org.kde.Platform/x86_64/5.11 
+    git clone https://github.com/user5145/com.tibia.Client-flatpak
+    cd com.tibia.Client-flatpak
+    flatpak-builder --force-clean --install builds com.tibia.Client.yml
+    cd ..
+    flatpak install flathub org.freedesktop.Sdk/x86_64/18.08 
+    flatpak install flathub org.electronjs.Electron2.BaseApp/x86_64/18.08 
+    git clone https://github.com/jirutka/com.meetfranz.Franz
+    cd com.meetfranz.Franz
+    flatpak-builder --install build com.meetfranz.Franz.json --force-clean --arch=x86_64
+    cd ..
+    git clone https://github.com/Taiko2k/tauonmb-flatpak
+    cd tauonmb-flatpak 
+    flatpak-builder --install build com.github.taiko2k.tauonmb.json --force-clean --arch=x86_64
+    cd ..
+    flatpak install flathub org.phoenicis.playonlinux
+    flatpak install flathub com.github.calo001.fondo
+    flatpak install flathub com.gitlab.coringao.cavestory-nx 
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
     su  "$USER" ./installapplet.sh

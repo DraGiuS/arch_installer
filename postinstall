@@ -657,9 +657,9 @@ ending_script() { # {{
     cd ..
     flatpak install flathub  org.kde.Sdk/x86_64/5.11 
     flatpak install flathub  org.kde.Platform/x86_64/5.11 
-    git clone https://github.com/user5145/com.tibia.Client-flatpak
-    cd com.tibia.Client-flatpak
-    flatpak-builder --force-clean --install builds com.tibia.Client.yml
+    git clone https://github.com/user5145/sh.ppy.Osu-lazer-flatpak    
+    cd sh.ppy.Osu-lazer-flatpak
+    flatpak-builder --force-clean --install builds sh.ppy.Osu-lazer.yml
     cd ..
     flatpak install flathub org.freedesktop.Sdk/x86_64/18.08 
     flatpak install flathub org.electronjs.Electron2.BaseApp/x86_64/18.08 

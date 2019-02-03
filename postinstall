@@ -641,6 +641,10 @@ ending_script() { # {{
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
     flatpak install flathub fr.natron.Natron
     flatpak install flathub org.gnome.Sdk/x86_64/3.30
+    flatpak install flathub  org.kde.Sdk/x86_64/5.11 
+    flatpak install flathub  org.kde.Platform/x86_64/5.11 
+    flatpak install flathub org.freedesktop.Sdk/x86_64/18.08 
+    flatpak install flathub org.electronjs.Electron2.BaseApp/x86_64/18.08 
     git clone https://github.com/DraGiuS/ephemeral-flatpak
     cd ephemeral-flatpak
     flatpak-builder --user --install build com.github.cassidyjames.ephemeral.json --force-clean --arch=x86_64
@@ -655,14 +659,12 @@ ending_script() { # {{
     flatpak remote-add --no-gpg-verify "hexoeditor" "repo"
     flatpak install "hexoeditor" "com.github.zhuzhuyule.HexoEditor"
     cd ..
-    flatpak install flathub  org.kde.Sdk/x86_64/5.11 
-    flatpak install flathub  org.kde.Platform/x86_64/5.11 
-    git clone https://github.com/user5145/sh.ppy.Osu-lazer-flatpak    
-    cd sh.ppy.Osu-lazer-flatpak
-    flatpak-builder --force-clean --install builds sh.ppy.Osu-lazer.yml
+    git clone https://github.com/scx/vade-mecum-shelf-flatpak
+    cd vade-mecum-shelf-flatpak
+    flatpak-builder --repo="repo" --force-clean "build" "com.github.tonton_pixel.VadeMecumShelf.yaml"
+    flatpak remote-add --no-gpg-verify "vademecumshelf" "repo"
+    flatpak install "vademecumshelf" "com.github.tonton_pixel.VadeMecumShelf"
     cd ..
-    flatpak install flathub org.freedesktop.Sdk/x86_64/18.08 
-    flatpak install flathub org.electronjs.Electron2.BaseApp/x86_64/18.08 
     git clone https://github.com/jirutka/com.meetfranz.Franz
     cd com.meetfranz.Franz
     flatpak-builder --install build com.meetfranz.Franz.json --force-clean --arch=x86_64

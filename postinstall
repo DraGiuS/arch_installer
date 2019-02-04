@@ -673,6 +673,9 @@ ending_script() { # {{
     cd tauonmb-flatpak 
     flatpak-builder --install build com.github.taiko2k.tauonmb.json --force-clean --arch=x86_64
     cd ..
+    git clone https://github.com/user5145/com.tibia.Client-flatpak          
+    cd com.tibia.Client-flatpak
+    flatpak-builder --force-clean --install builds com.tibia.Client.yml     
     flatpak install flathub org.phoenicis.playonlinux
     flatpak install flathub com.github.calo001.fondo
     flatpak install flathub com.gitlab.coringao.cavestory-nx 

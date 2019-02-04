@@ -647,7 +647,7 @@ ending_script() { # {{
     flatpak install flathub org.electronjs.Electron2.BaseApp/x86_64/18.08 
     git clone https://github.com/DraGiuS/ephemeral-flatpak
     cd ephemeral-flatpak
-    flatpak-builder --user --install build com.github.cassidyjames.ephemeral.json --force-clean --arch=x86_64
+    flatpak-builder --install build com.github.cassidyjames.ephemeral.json --force-clean --arch=x86_64
     cd ..
     git clone https://gitlab.com/Preisschild/popcorntime-flatpak
     cd popcorntime-flatpak

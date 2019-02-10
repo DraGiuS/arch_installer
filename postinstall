@@ -97,6 +97,8 @@ install_theme() { # {{{
 	cp wallhaven-614476.jpg /home
 	cp wallhaven-355344.png /home
 	cp wallhaven-526387.jpg /home
+	cp wallpaper.jpg /home
+	cp rcLqZ4X.jpg /home
 	cp wallhaven-728479.jpg /home
 	cp wallhaven-591780.jpg /home
 	cp wallhaven-741273.jpg /home

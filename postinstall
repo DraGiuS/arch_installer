@@ -239,17 +239,17 @@ echo -n "Is your computer from skylake or silvermont generation ? If not then ch
 read answer
 if [ "$answer" = 'skylake' ]
 then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-skylake-4.20.4-1-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-skylake-4.20.4-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-skylake-4.20.5-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-skylake-4.20.5-1-x86_64.pkg.tar.xz
 
 elif [ "$answer" = 'silvermont' ]
 then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-silvermont-4.20.4-1-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-silvermont-4.20.4-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-silvermont-4.20.5-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-silvermont-4.20.5-1-x86_64.pkg.tar.xz
 elif [ "$answer" = 'generic' ]
 then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-generic-4.20.4-1-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-generic-4.20.4-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-generic-4.20.5-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-generic-4.20.5-1-x86_64.pkg.tar.xz
 fi
 
 pacman -U *.pkg.tar.xz

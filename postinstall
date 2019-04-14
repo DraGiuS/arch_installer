@@ -434,7 +434,7 @@ fi
                         wget https://github.com/DraGiuS/Titania-Git-PKGBUILD/releases/download/5742%402410c5a/titania-git-5742-1-x86_64.pkg.tar.xz
                         pacman -U titania-git-5742-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'arch-animated-startscreen vivaldi-snapshot snapd xpadneo-dkms-git spotify thunderbird-appmenu birdtray buttermanager deezloader-remix-bin recbox-ardour-theme-git notable-bin unity-editor-beta slack-desktop-dark blender-2.8-git github-desktop-git mesen-git feedreader-git lgogdownloader mandelbulber2-opencl-git s-tui virtualbox-beta-bin onivim-git netflix-qdesktop rpcs3-git vscodium plasma5-applets-volumewin7mixer wingide-personal gravit-designer-bin spiral-knights evince-no-gnome evesetup youtube-dl-gui-git ardour-git conky-lua itch-bin kwin-scripts-quarter-tiling-git gamehub-git streamlink-twitch-gui pamac-aur-git unityhub yuzu-canary-git cemu' # My stuff
+			install_aur_package 'arch-animated-startscreen vivaldi-snapshot snapd xpadneo-dkms-git spotify thunderbird-appmenu birdtray buttermanager deezloader-remix-bin recbox-ardour-theme-git notable-bin unity-editor-beta slack-desktop-dark blender-2.8-git github-desktop-git mesen-git feedreader-git lgogdownloader mandelbulber2-opencl-git s-tui virtualbox-beta-bin onivim-git netflix-qdesktop rpcs3-git vscodium plasma5-applets-volumewin7mixer gravit-designer-bin spiral-knights evince-no-gnome evesetup youtube-dl-gui-git ardour-git conky-lua itch-bin kwin-scripts-quarter-tiling-git gamehub-git streamlink-twitch-gui pamac-aur-git unityhub yuzu-canary-git cemu' # My stuff
                         systemctl start snapd.socket
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
 			systemctl enable snapd.socket
@@ -586,7 +586,7 @@ install_translation() { # {{{
 install_fonts() { # {{{
 	print_progress 'Install some nice fonts'
 
-	install_aur_package 'ttf-material-icons'
+	install_aur_package 'ttf-material-icons-git'
 	install_package 'ttf-inconsolata ttf-roboto ttf-font-awesome'
 		
 	enter_to_continue
@@ -622,7 +622,7 @@ setup_bumblebee() { # {{
 setup_android_dev() { # {{
     print_info 'Your are going to set up an android selection of software for developing for this platform'
     read -p 'USER: ' USER
-    install_package 'android-sdk android-studio'
+    install_aur_package 'android-sdk android-studio'
     install_aur_package 'apkstudio-git genymotion unity-editor-beta-android'
     
     export ANDROID_HOME=/opt/android-sdk

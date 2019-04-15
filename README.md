@@ -76,6 +76,33 @@ Quarter tiling in action :
 **Note:** You should install in the correct order from 1-n because I did not
 check all cases
 
+```bash 
+
+# if you use wifi, if not, then check out the next part
+
+rfkill unblock all
+
+wifi-menu 
+
+```
+
+```bash
+
+
+pacman -Sy git
+
+git clone https://github.com/DraGiuS/arch_installer
+
+cd arch_installer
+
+it's recommended to edit the "common" file
+
+./install
+
+```
+
+* After installing the base system choose finish to reboot. Clone the repo then go to it and run the other script
+
 ```bash
 git clone -b postinstall https://github.com/DraGiuS/arch_installer
 
@@ -89,11 +116,13 @@ cd arch_installer
 
 * Kde unstable option
 
-* Added some packages, aur or not.. (Flatpak,Snap)
+* Added some packages, aur or not.. 
+
+* Support of Flatpak and snap packages by default
 
 * Davinci Resolve and Unity Editor on the default install
 
-* You can set up your android development easily (android sdk,android studio,genymotion and licence agreement)
+* You can set up your android development easily (android sdk,android studio,genymotion and licence agreement,unity editor addon)
 
 * Changed grub, plasma, sddm, icon theme
 
@@ -121,7 +150,7 @@ cd arch_installer
 
 * GOG Games
 
-* Choose your own version of firefox (esr/beta/nightly/wayland-hg/with appmenu support)
+* Choose your own version of firefox (esr/beta/nightly/wayland-hg/fedora-wayland/with appmenu support)
 
 #  Credits
 
@@ -132,7 +161,7 @@ cd arch_installer
 * https://github.com/jsalatas/plasma-pstate
 * https://github.com/Polunom/mac-inline-battery
 * https://github.com/Zren/plasma-applet-volumewin7mixer
-* https://github.com/divinae/umenu
+* https://github.com/JNuutinen/plasma-minimalmenu
 * https://github.com/divinae/uswitch
 * https://github.com/MalditoBarbudo/solarized_sddm_theme
 * https://github.com/fahrud26/Conky-Themes 

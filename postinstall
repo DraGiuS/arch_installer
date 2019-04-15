@@ -654,12 +654,6 @@ ending_script() { # {{
     git clone https://github.com/scx/hexoeditor-flatpak
     cd hexoeditor-flatpak
     flatpak-builder --repo="repo" --force-clean "build" "com.github.zhuzhuyule.HexoEditor.yaml"	
-    git clone https://github.com/scx/vade-mecum-shelf-flatpak
-    cd vade-mecum-shelf-flatpak
-    flatpak-builder --repo="repo" --force-clean "build" "com.github.tonton_pixel.VadeMecumShelf.yaml"
-    flatpak remote-add --no-gpg-verify "vademecumshelf" "repo"
-    flatpak install "vademecumshelf" "com.github.tonton_pixel.VadeMecumShelf"
-    cd ..
     git clone https://github.com/jirutka/com.meetfranz.Franz
     cd com.meetfranz.Franz
     flatpak-builder --install build com.meetfranz.Franz.json --force-clean --arch=x86_64

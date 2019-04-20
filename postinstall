@@ -151,7 +151,6 @@ create_user_account() { # {{{
 	cp .zshrc /home/"$USERNAME"/
 	cd ..
 	cd ..
-	cp PKGBUILD /home/"$USERNAME"/
 	mkdir -p /home/"$USERNAME"/.local/share/color-schemes/
 	cp OneDark.colors /home/"$USERNAME"/.local/share/color-schemes/
 	cp Neptune.colors /home/"$USERNAME"/.local/share/color-schemes/

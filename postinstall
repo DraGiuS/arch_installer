@@ -245,17 +245,17 @@ echo -n "Is your computer from skylake or silvermont generation ? If not then ch
 read answer
 if [ "$answer" = 'skylake' ]
 then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-skylake-5.0.5-1-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-skylake-5.0.5-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-skylake-5.0.6-2-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-skylake-5.0.6-2-x86_64.pkg.tar.xz
 
 elif [ "$answer" = 'silvermont' ]
 then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-silvermont-5.0.5-1-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-silvermont-5.0.5-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-silvermont-5.0.6-2-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-silvermont-5.0.6-2-x86_64.pkg.tar.xz
 elif [ "$answer" = 'generic' ]
 then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-generic-5.0.5-1-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-generic-5.0.5-1-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-generic-5.0.6-2-x86_64.pkg.tar.xz
+wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-generic-5.0.6-2-x86_64.pkg.tar.xz
 fi
 
 pacman -U *.pkg.tar.xz
@@ -626,7 +626,7 @@ setup_android_dev() { # {{
     print_info 'Your are going to set up an android selection of software for developing for this platform'
     read -p 'USER: ' USER
     install_aur_package 'android-sdk android-studio'
-    install_aur_package 'apkstudio-git genymotion unity-editor-beta-android'
+    install_aur_package 'apkstudio-git genymotion unity-editor-beta-android xamarin-android-git'
     
     export ANDROID_HOME=/opt/android-sdk
     groupadd sdkusers

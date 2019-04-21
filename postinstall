@@ -102,6 +102,8 @@ install_theme() { # {{{
 	cp lsd.jpg /home
 	cp wallpaper.jpeg /home
 	cp mirage1.jpg /home
+	cp wallhaven-225486.png /home
+	cp The_Verge_Hysteresis_Wallpaper_Landscape.0.png /home
 	cp wallhaven-657318.jpg /home
 	cp wallhaven-748291.jpg /home
 	cp wallhaven-748524.jpg /home

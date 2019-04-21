@@ -444,13 +444,7 @@ fi
                         systemctl start snapd.socket
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
 			systemctl enable snapd.socket
-			sleep 15
-			snap refresh
-			snap install zenkit
-			snap install instagraph
-			snap install auryo
-			snap install polarr
-			snap install --beta boa
+			systemctl start snapd.socket
 			systemctl enable org.cups.cupsd.service    
 			sudo systemctl enable bluetooth.service
 			sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
@@ -642,7 +636,7 @@ setup_android_dev() { # {{
 # }}}
 
 ending_script() { # {{
-    print_info 'Installing needed applets and install some flatpak apps'
+    print_info 'Installing needed applets and install some flatpak and snap apps'
     read -p 'USER: ' USER
     cd /home/"$USER"/
     mkdir flatpak
@@ -651,6 +645,11 @@ ending_script() { # {{
     flatpak install flathub org.phoenicis.playonlinux
     flatpak install flathub com.github.calo001.fondo
     flatpak install flathub com.gitlab.coringao.cavestory-nx 
+    snap refresh
+    snap install zenkit
+    snap install auryo
+    snap install polarr
+    snap install --beta boa
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
     su  "$USER" ./installapplet.sh

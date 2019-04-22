@@ -649,8 +649,6 @@ ending_script() { # {{
     flatpak install flathub com.gitlab.coringao.cavestory-nx 
     snap refresh
     snap install zenkit
-    snap install auryo
-    snap install polarr
     snap install --beta boa
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel

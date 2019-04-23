@@ -434,7 +434,7 @@ fi
 			install_package 'wget qt5 kio-extras plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
 	                install_package 'flatpak sshfs flatpak-builder bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libisoburn libpng12 lib32-libpng12 xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu qt4 telegram-desktop hplip gparted qbittorrent linux-headers lutris mupen64plus steam obs-studio thunderbird dolphin-emu obs-studio pycharm-community-edition' # Stuffu pycharm-community-edition' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
-			install_package 'overgrive downgrade zotero spotify inxi google-musicmanager' #andontie-aur
+			install_package 'overgrive downgrade zotero inxi google-musicmanager' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
 			wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/15.2.2-2/davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
@@ -649,6 +649,8 @@ ending_script() { # {{
     flatpak install flathub com.gitlab.coringao.cavestory-nx 
     snap refresh
     snap install zenkit
+    snap install spotify
+    snap install discord
     snap install --beta boa
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel

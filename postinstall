@@ -109,6 +109,7 @@ install_theme() { # {{{
 	cp wallhaven-225486.png /home
 	cp The_Verge_Hysteresis_Wallpaper_Landscape.0.png /home
 	cp wallhaven-657318.jpg /home
+	cp SpacesMaster.jpg /home
 	cp wallhaven-748291.jpg /home
 	cp wallhaven-748524.jpg /home
 	cp wallhaven-748525.jpg /home

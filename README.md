@@ -44,7 +44,7 @@ customizable, well maintained and have more options than my script anyway
 
 Here, the sddm theme that you will get : 
 
-<img src=https://github.com/MalditoBarbudo/solarized_sddm_theme/blob/master/solarized_sddm_theme.png width="960"/>
+<img src=https://github.com/Rokin05/SDDM-Themes/blob/master/.github/medias/screenshots/zune/preview6.jpg width="960"/>
 
 Currently, the desktop look like this : 
 

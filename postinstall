@@ -323,12 +323,12 @@ setup_dotfiles() { # {{{
 
 install_display_manager() { # {{{
 	print_progress 'Install display manager'
-	install_package 'sddm'
-	install_aur_package 'solarized-sddm-theme'
+	install_package 'sddm qt5-quickcontrols2 qt5-graphicaleffects qt5-svg'
 	
 	systemctl enable sddm
 	sddm --example-config > /etc/sddm.conf
-	sed -i 's/Current=/Current=solarized-sddm-theme/' /etc/sddm.conf
+	tar -xzvf sddm-zune.tar.gz -C /usr/share/sddm/themes
+	sed -i 's/Current=/Current=zune/' /etc/sddm.conf
 	sed -i 's/CursorTheme=/CursorTheme=breeze_cursors/' /etc/sddm.conf
 	sed -i 's/Numlock=none/Numlock=on/' /etc/sddm.conf
 	sed -i 's/InputMethod=qtvirtualkeyboard/InputMethod=/' /etc/sddm.conf

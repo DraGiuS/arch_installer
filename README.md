@@ -122,7 +122,7 @@ cd arch_installer
 
 * Davinci Resolve and Unity Editor on the default install
 
-* You can set up your android development easily (android sdk,android studio,genymotion and licence agreement,unity editor addon)
+* You can set up your android development easily 
 
 * Changed grub, plasma, sddm, icon theme
 
@@ -163,7 +163,7 @@ cd arch_installer
 * https://github.com/Zren/plasma-applet-volumewin7mixer
 * https://github.com/JNuutinen/plasma-minimalmenu
 * https://github.com/divinae/uswitch
-* https://github.com/MalditoBarbudo/solarized_sddm_theme
+* https://github.com/Rokin05/SDDM-Themes
 * https://github.com/fahrud26/Conky-Themes 
 * https://github.com/arcticicestudio/nord-konsole
 * https://store.kde.org/p/1268541/

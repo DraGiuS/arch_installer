@@ -111,6 +111,7 @@ install_theme() { # {{{
 	cp wallhaven-657318.jpg /home
 	cp SpacesMaster.jpg /home
 	cp wallhaven-748291.jpg /home
+	cp neon.jpg /home
 	cp wallhaven-748524.jpg /home
 	cp wallhaven-748525.jpg /home
 	cp wallhaven-728479.jpg /home

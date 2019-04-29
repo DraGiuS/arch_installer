@@ -445,8 +445,8 @@ fi
 			install_package 'overgrive downgrade zotero inxi google-musicmanager' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
-			wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/15.2.2-2/davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
-			pacman -U davinci-resolve-15.2.2-2-x86_64.pkg.tar.xz
+			wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/16.0b1/davinci-resolve-beta-16.0b1-2-any.pkg.tar.xz
+			pacman -U davinci-resolve-beta-16.0b1-2-any.pkg.tar.xz
                         wget https://github.com/DraGiuS/Titania-Git-PKGBUILD/releases/download/6032/titania-git-6032-1-x86_64.pkg.tar.xz
 			pacman -U titania-git-6032-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz

@@ -112,7 +112,7 @@ cd arch_installer
 ```
 
 # MyChanges
-* Support of bumblebee
+* Support of bumblebee and vulkan with primus-vk
 
 * Kde unstable option
 

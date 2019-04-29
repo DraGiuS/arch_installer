@@ -616,10 +616,11 @@ setup_zsh() { # {{
 setup_bumblebee() { # {{
         print_title 'BUMBLEBEE'
 	print_info 'It will install bumblebee for u'
-	install_package 'bumblebee winetricks mesa-demos bbswitch-dkms primus lib32-primus intel-dri xf86-video-intel nvidia-dkms nvidia-utils lib32-nvidia-utils lib32-intel-dri'
+	install_package 'bumblebee primus_vk lib32-primus_vk vulkan-intel winetricks mesa-demos bbswitch-dkms primus lib32-primus intel-dri xf86-video-intel nvidia-dkms nvidia-utils lib32-nvidia-utils lib32-intel-dri'
 	read -p 'USER: ' USER
 	gpasswd -a "$USER" bumblebee 
 	cp /root/arch_installer/bumblebee.conf /etc/bumblebee/bumblebee.conf
+	rm /usr/share/vulkan/icd.d/nv_vulkan_wrapper.json
 	systemctl enable bumblebeed 
 	
 	enter_to_continue

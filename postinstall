@@ -131,7 +131,6 @@ install_theme() { # {{{
 	cp wall.jpg /home
 	mkdir -p /usr/share/aurorae/themes
 	cp -r Sweet-Dark-transparent /usr/share/aurorae/themes
-	cp -r Formvolvere /usr/share/aurorae/themes
         mkdir -p /usr/share/plasma/desktoptheme
         cp -r 'Aex Nomad' /usr/share/plasma/desktoptheme/
 	cp -r 'Aex Nomad Dark' /usr/share/plasma/desktoptheme/

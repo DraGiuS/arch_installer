@@ -656,6 +656,8 @@ ending_script() { # {{
     flatpak install flathub org.phoenicis.playonlinux
     flatpak install flathub com.github.calo001.fondo
     snap refresh
+    sleep 15 
+    snap refresh
     snap install zenkit
     snap install spotify
     snap install discord

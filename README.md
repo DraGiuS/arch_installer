@@ -42,7 +42,7 @@ customizable, well maintained and have more options than my script anyway
 
 # Screenshot 
 
-Here, the sddm theme that you will get : 
+Here, the lightdm theme that you will get : 
 
 <img src=https://github.com/bringmethecode/enkel-greeter/blob/master/preview.png width="960"/>
 

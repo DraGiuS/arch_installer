@@ -44,7 +44,7 @@ customizable, well maintained and have more options than my script anyway
 
 Here, the sddm theme that you will get : 
 
-<img src=https://github.com/Rokin05/SDDM-Themes/blob/master/.github/medias/screenshots/zune/preview6.jpg width="960"/>
+<img src=https://github.com/bringmethecode/enkel-greeter/blob/master/preview.png width="960"/>
 
 Currently, the desktop look like this : 
 
@@ -163,7 +163,7 @@ cd arch_installer
 * https://github.com/Zren/plasma-applet-volumewin7mixer
 * https://github.com/JNuutinen/plasma-minimalmenu
 * https://github.com/divinae/uswitch
-* https://github.com/Rokin05/SDDM-Themes
+* https://github.com/bringmethecode/enkel-greeter
 * https://github.com/fahrud26/Conky-Themes 
 * https://github.com/arcticicestudio/nord-konsole
 * https://store.kde.org/p/1268541/

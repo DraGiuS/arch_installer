@@ -326,16 +326,12 @@ setup_dotfiles() { # {{{
 
 install_display_manager() { # {{{
 	print_progress 'Install display manager'
-	install_package 'sddm qt5-quickcontrols2 qt5-graphicaleffects qt5-svg'
+	install_package 'lightdm-webkit2-greeter'
 	
-	systemctl enable sddm
-	sddm --example-config > /etc/sddm.conf
-	tar -xzvf sddm-zune.tar.gz -C /usr/share/sddm/themes
-	sed -i 's/Current=/Current=zune/' /etc/sddm.conf
-	sed -i 's/CursorTheme=/CursorTheme=breeze_cursors/' /etc/sddm.conf
-	sed -i 's/Numlock=none/Numlock=on/' /etc/sddm.conf
-	sed -i 's/InputMethod=qtvirtualkeyboard/InputMethod=/' /etc/sddm.conf
-
+	systemctl enable lightdm
+	tar -xvf enkel-1.0.tar.xz -C /usr/share/lightdm-webkit/themes/
+        sed -i 's/antergos/enkel/' /etc/lightdm/lightdm-webkit2-greeter.conf
+	sed -i 's/#greeter-session=/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 }
 # }}}
 

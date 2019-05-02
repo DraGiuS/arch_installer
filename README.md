@@ -144,7 +144,7 @@ cd arch_installer
 
 * Changed default gtk theme
 
-* Alternative kernel (Pf kernel)
+* Alternative kernel (Ck kernel)
 
 * Vscode config
 
@@ -171,7 +171,7 @@ cd arch_installer
 * https://github.com/NearHuscarl/arch_installer
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/Sude-/lgogdownloader
-* https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/
+* https://github.com/petter3k/linux-ck-reiser4
 * Archlinux team
 * ME ('cause i love me)
 # License

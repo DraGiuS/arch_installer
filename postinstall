@@ -250,25 +250,10 @@ install_base() { # {{{
 }
 # }}}
 
-install_pf() { # {{{
+install_ck() { # {{{
 
-echo -n "Is your computer from skylake or silvermont generation ? If not then choose generic (skylake/silvermont/generic): "
-read answer
-if [ "$answer" = 'skylake' ]
-then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-skylake-5.0.6-2-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-skylake-5.0.6-2-x86_64.pkg.tar.xz
-
-elif [ "$answer" = 'silvermont' ]
-then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-silvermont-5.0.6-2-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-silvermont-5.0.6-2-x86_64.pkg.tar.xz
-elif [ "$answer" = 'generic' ]
-then
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-headers-generic-5.0.6-2-x86_64.pkg.tar.xz
-wget https://download.opensuse.org/repositories/home:/post-factum:/kernels/Arch/x86_64/linux-pf-generic-5.0.6-2-x86_64.pkg.tar.xz
-fi
-
+wget https://github.com/DraGiuS/linux-ck-reiser4/releases/download/5.0.9-4/linux-ck-reiser4-5.0.9-4-x86_64.pkg.tar.xz
+wget https://github.com/DraGiuS/linux-ck-reiser4/releases/download/5.0.9-4/linux-ck-reiser4-headers-5.0.9-4-x86_64.pkg.tar.xz
 pacman -U *.pkg.tar.xz
 grub-mkconfig -o /boot/grub/grub.cfg
 rm *.pkg.tar.xz
@@ -694,7 +679,7 @@ install() { # {{{
 		echo "    6. $(mainmenu_item "${checklist[6]}"  'Install your favorites gog games')"
 		echo "    7. $(mainmenu_item "${checklist[7]}"  'Install translation')"
 		echo "    8. $(mainmenu_item "${checklist[8]}"  'Install base')"
-		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install pf latest kernel')"
+		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install ck-reiser4 latest kernel')"
 		echo "   10. $(mainmenu_item "${checklist[10]}"  'Setup dotfiles')"
 		echo "   11. $(mainmenu_item "${checklist[11]}" 'Install fonts')"
 		echo "   12. $(mainmenu_item "${checklist[12]}" 'Setup of Zsh with powerlevel9k')"
@@ -744,7 +729,7 @@ install() { # {{{
 				checklist[8]=1
 				;;
 			9) 
-			        install_pf
+			        install_ck
 			        checklist[9]=1
 				;;
 			10)

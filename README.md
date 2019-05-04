@@ -142,7 +142,7 @@ cd arch_installer
 
 * Changed default gtk theme
 
-* Alternative kernel (Zen Hardened Kernel)
+* Alternative kernel (Xanmod Kernel)
 
 * Vscode config
 
@@ -169,7 +169,7 @@ cd arch_installer
 * https://github.com/NearHuscarl/arch_installer
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/Sude-/lgogdownloader
-* https://github.com/awcurless/linux-zen-hardened-pkgbuild
+* https://github.com/DraGiuS/linux-xanmod-precompiled
 * Archlinux team
 * ME ('cause i love me)
 # License

@@ -124,8 +124,6 @@ cd arch_installer
 
 * You can set up your android development easily 
 
-* Changed grub, plasma, sddm, icon theme
-
 * Default setup of zsh with powerlevel9k
 
 * Quarter tiling for Plasma
@@ -144,7 +142,7 @@ cd arch_installer
 
 * Changed default gtk theme
 
-* Alternative kernel (Ck kernel)
+* Alternative kernel (Zen Hardened Kernel)
 
 * Vscode config
 

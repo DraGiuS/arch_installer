@@ -169,7 +169,7 @@ cd arch_installer
 * https://github.com/NearHuscarl/arch_installer
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/Sude-/lgogdownloader
-* https://github.com/petter3k/linux-ck-reiser4
+* https://github.com/awcurless/linux-zen-hardened-pkgbuild
 * Archlinux team
 * ME ('cause i love me)
 # License

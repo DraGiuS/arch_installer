@@ -250,10 +250,10 @@ install_base() { # {{{
 }
 # }}}
 
-install_zen_hardened() { # {{{
+install_xanmod() { # {{{
 
-wget https://github.com/DraGiuS/linux-zen-hardened-pkgbuild/releases/download/v5.0.12/linux-zen-hardened-5.0.12.zen.hardened-1-x86_64.pkg.tar.xz
-wget https://github.com/DraGiuS/linux-zen-hardened-pkgbuild/releases/download/v5.0.12/linux-zen-hardened-headers-5.0.12.zen.hardened-1-x86_64.pkg.tar.xz
+wget https://github.com/DraGiuS/linux-xanmod-precompiled/releases/download/5.0.12/linux-xanmod-5.0.12-1-x86_64.pkg.tar.xz
+wget https://github.com/DraGiuS/linux-xanmod-precompiled/releases/download/5.0.12/linux-xanmod-headers-5.0.12-1-x86_64.pkg.tar.xz
 pacman -U *.pkg.tar.xz
 grub-mkconfig -o /boot/grub/grub.cfg
 rm *.pkg.tar.xz
@@ -679,7 +679,7 @@ install() { # {{{
 		echo "    6. $(mainmenu_item "${checklist[6]}"  'Install your favorites gog games')"
 		echo "    7. $(mainmenu_item "${checklist[7]}"  'Install translation')"
 		echo "    8. $(mainmenu_item "${checklist[8]}"  'Install base')"
-		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install zen-hardened latest kernel')"
+		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install xanmod latest kernel')"
 		echo "   10. $(mainmenu_item "${checklist[10]}"  'Setup dotfiles')"
 		echo "   11. $(mainmenu_item "${checklist[11]}" 'Install fonts')"
 		echo "   12. $(mainmenu_item "${checklist[12]}" 'Setup of Zsh with powerlevel9k')"
@@ -729,7 +729,7 @@ install() { # {{{
 				checklist[8]=1
 				;;
 			9) 
-			        install_zen_hardened
+			        install_xanmod
 			        checklist[9]=1
 				;;
 			10)

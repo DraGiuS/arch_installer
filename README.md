@@ -50,14 +50,6 @@ Currently, the desktop look like this :
 
 <img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.jpg width="960"/>
 
-Changed the default plasma menu with : https://gitlab.com/jnuutinen/minimal-menu
-
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/menu.jpg width="960"/>
-
-Quarter tiling in action : 
-
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/quarter-tiling.png width="1060"/>
-
 # Detail
 
 * This script will only run on UEFI systems

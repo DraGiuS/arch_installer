@@ -154,7 +154,7 @@ cd arch_installer
 * https://github.com/JNuutinen/plasma-minimalmenu
 * https://github.com/divinae/uswitch
 * https://github.com/bringmethecode/enkel-greeter
-* https://github.com/fahrud26/Conky-Themes 
+* https://github.com/DraGiuS/conky-spoclo
 * https://github.com/arcticicestudio/nord-konsole
 * https://store.kde.org/p/1268541/
 * https://github.com/Jazqa/kwin-quarter-tiling

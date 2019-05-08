@@ -48,7 +48,7 @@ Here, the lightdm theme that you will get :
 
 Currently, the desktop look like this : 
 
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.jpg width="960"/>
+<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.pngwidth="960"/>
 
 # Detail
 

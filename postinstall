@@ -141,7 +141,6 @@ install_theme() { # {{{
 	cp wallhaven-698231.jpg /home
 	cp -r .config /etc/skel
 	cp -r .local /etc/skel
-	cp -r raleway /usr/share/fonts
 	
 	enter_to_continue
 }
@@ -157,7 +156,7 @@ create_user_account() { # {{{
         mkdir /home/"$USERNAME"/.config/conky
 	mkdir /home/"$USERNAME"/.config/autostart
         cd Skel/etc/skel
-	cp -r Elegance-Beam /home/"$USERNAME"/.config/conky/
+	cp -r spoclo /home/"$USERNAME"/.config/conky/
         cp conky.desktop /home/"$USERNAME"/.config/autostart/
 	cp .zshrc /home/"$USERNAME"/
 	cd ..
@@ -166,7 +165,7 @@ create_user_account() { # {{{
 	cp OneDark.colors /home/"$USERNAME"/.local/share/color-schemes/
 	cp Neptune.colors /home/"$USERNAME"/.local/share/color-schemes/
 	mkdir -p /usr/share/themes
-        cp -r 'Flat-Remix-GTK-Red-Darker' /usr/share/themes/
+        cp -r 'Nord-Material' /usr/share/themes/
 	cd /home/"$USERNAME"
 	mkdir Bureau
 	mkdir Documents
@@ -175,7 +174,9 @@ create_user_account() { # {{{
 	mkdir Images
 	mkdir Téléchargements
 	mkdir Vidéos
-	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos
+	mkdir Android
+	mkdir Aur
+	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur
 		
 	enter_to_continue
 }

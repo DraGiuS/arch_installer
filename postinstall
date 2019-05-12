@@ -372,7 +372,7 @@ install_desktop_environment() { # {{{
 	case "$DESKTOP_ENVIRONMENT" in
 		KDE)     
 		
-echo -n "Which version of firefox do you want ? (esr/beta/nightly/wayland-hg/appmenu/kde-opensuse/fedora-wayland): "
+echo -n "Which version of firefox do you want ? (esr/beta/nightly/appmenu/kde-opensuse/fedora-wayland): "
 read answer
 if [ "$answer" = 'esr' ]
 then
@@ -385,15 +385,6 @@ install_aur_package 'firefox-beta-bin-all-localizations'
 elif [ "$answer" = 'nightly' ]
 then
 install_aur_package 'firefox-nightly'
-
-elif [ "$answer" = 'wayland-hg' ]
-then
-read -p 'User: ' USER
-cd /home/"$USER"/
-git clone https://aur.archlinux.org/firefox-wayland-hg.git
-chmod -R 777 firefox-wayland-hg
-cd firefox-wayland-hg
-su - "$USER" -c "cd /home/"$USER"/firefox-wayland-hg;makepkg -srci;"
 
 elif [ "$answer" = 'appmenu' ]
 then

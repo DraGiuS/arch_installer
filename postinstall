@@ -633,6 +633,8 @@ ending_script() { # {{
     flatpak install flathub com.github.calo001.fondo
     snap refresh
     sleep 15 
+    systemctl enable apparmor
+    systemctl start apparmor
     snap refresh
     snap install zenkit
     snap install spotify

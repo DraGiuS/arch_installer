@@ -176,6 +176,8 @@ create_user_account() { # {{{
 	mkdir Vidéos
 	mkdir Android
 	mkdir Aur
+	mkdir .conky
+	cp -r spoclo /home/"$USERNAME"/.conky/
 	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur
 		
 	enter_to_continue

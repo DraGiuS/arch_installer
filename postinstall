@@ -318,7 +318,7 @@ install_display_manager() { # {{{
 	systemctl enable lightdm
 	tar -xvf enkel-1.0.tar.xz -C /usr/share/lightdm-webkit/themes/
         sed -i 's/antergos/enkel/' /etc/lightdm/lightdm-webkit2-greeter.conf
-	sed -i 's/#greeter-session=example-gtk/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+	sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 }
 # }}}
 

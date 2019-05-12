@@ -318,7 +318,7 @@ install_display_manager() { # {{{
 	systemctl enable lightdm
 	tar -xvf enkel-1.0.tar.xz -C /usr/share/lightdm-webkit/themes/
         sed -i 's/antergos/enkel/' /etc/lightdm/lightdm-webkit2-greeter.conf
-	sed -i 's/#greeter-session=/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+	sed -i 's/#greeter-session=example-gtk/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 }
 # }}}
 
@@ -607,7 +607,7 @@ setup_android_dev() { # {{
     print_info 'Your are going to set up an android selection of software for developing for this platform'
     read -p 'USER: ' USER
     install_aur_package 'android-sdk android-studio'
-    install_aur_package 'apkstudio-git genymotion unity-editor-beta-android xamarin-android-git'
+    install_aur_package 'genymotion unity-editor-beta-android xamarin-android-git'
     
     export ANDROID_HOME=/opt/android-sdk
     groupadd sdkusers

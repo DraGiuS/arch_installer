@@ -140,7 +140,7 @@ cd arch_installer
 
 * GOG Games
 
-* Choose your own version of firefox (esr/beta/nightly/wayland-hg/fedora-wayland/with appmenu support)
+* Choose your own version of firefox 
 
 #  Credits
 

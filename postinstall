@@ -253,8 +253,8 @@ install_base() { # {{{
 
 install_xanmod() { # {{{
 
-wget https://github.com/DraGiuS/linux-xanmod-precompiled/releases/download/5.0.12/linux-xanmod-5.0.12-1-x86_64.pkg.tar.xz
-wget https://github.com/DraGiuS/linux-xanmod-precompiled/releases/download/5.0.12/linux-xanmod-headers-5.0.12-1-x86_64.pkg.tar.xz
+wget https://github.com/DraGiuS/linux-xanmod-precompiled/releases/download/5.1.0/linux-xanmod-5.1.0-1-x86_64.pkg.tar.xz
+wget https://github.com/DraGiuS/linux-xanmod-precompiled/releases/download/5.1.0/linux-xanmod-headers-5.1.0-1-x86_64.pkg.tar.xz
 pacman -U *.pkg.tar.xz
 grub-mkconfig -o /boot/grub/grub.cfg
 rm *.pkg.tar.xz

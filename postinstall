@@ -120,6 +120,9 @@ install_theme() { # {{{
 	cp wallhaven-741273.jpg /home
 	cp 12yuoy7p8sr21.png /home
 	cp 505851.jpg /home
+	cp batman-the-dark-knight-minimal-ac-1920x1080.jpg /home
+	cp fzMlxeU.png /home
+	cp wallhaven-767749.png /home
 	cp wallhaven-735613.png /home
 	cp rWkySxQ.jpg /home
 	cp 6ctk278yg3621.png /home

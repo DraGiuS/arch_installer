@@ -99,7 +99,6 @@ install_theme() { # {{{
 	cp wallhaven-526387.jpg /home
 	cp wallpaper.jpg /home
 	cp rcLqZ4X.jpg /home
-	cp lsd.jpg /home
 	cp wallhaven-765912.png /home
 	cp Wg2f4T3.jpg /home
         cp wallhaven-602455.jpg /home 	
@@ -125,7 +124,6 @@ install_theme() { # {{{
 	cp batman-the-dark-knight-minimal-ac-1920x1080.jpg /home
 	cp fzMlxeU.png /home
 	cp wallhaven-767749.png /home
-	cp wallhaven-735613.png /home
 	cp rWkySxQ.jpg /home
 	cp 6ctk278yg3621.png /home
 	cp lioness.jpg /home

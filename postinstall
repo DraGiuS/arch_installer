@@ -428,8 +428,8 @@ fi
 			install_package 'overgrive downgrade discord spotify zotero inxi google-musicmanager' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
-			wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/16.0b1/davinci-resolve-beta-16.0b1-2-any.pkg.tar.xz
-			pacman -U davinci-resolve-beta-16.0b1-2-any.pkg.tar.xz
+                        wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/16.0b3/davinci-resolve-beta-16.0b3-1-any.pkg.tar.xz
+                        pacman -U davinci-resolve-beta-16.0b3-1-any.pkg.tar.xz
 			wget https://github.com/DraGiuS/Lyricfier-PKGBUILD/releases/download/0.3.0/lyricfier-0.3.0-1-x86_64.pkg.tar.xz
 			pacman -U lyricfier-0.3.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz

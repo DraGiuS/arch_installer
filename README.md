@@ -44,7 +44,7 @@ customizable, well maintained and have more options than my script anyway
 
 Here, the lightdm theme that you will get : 
 
-<img src=https://raw.githubusercontent.com/ffwff/modern/master/screenshot.pngwidth="960"/>
+<img src=https://raw.githubusercontent.com/ffwff/modern/master/screenshot.png width="960"/>
 
 Currently, the desktop look like this : 
 

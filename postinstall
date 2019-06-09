@@ -123,6 +123,8 @@ install_theme() { # {{{
 	cp mystery.jpg /home
 	cp 12yuoy7p8sr21.png /home
 	cp 505851.jpg /home
+	cp deer.png /home
+	cp photo-1511108988782-9a5c10cbc062.jpg /home
 	cp batman-the-dark-knight-minimal-ac-1920x1080.jpg /home
 	cp fzMlxeU.png /home
 	cp wallhaven-767749.png /home
@@ -436,7 +438,7 @@ fi
 			wget https://github.com/DraGiuS/Lyricfier-PKGBUILD/releases/download/0.3.0/lyricfier-0.3.0-1-x86_64.pkg.tar.xz
 			pacman -U lyricfier-0.3.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'vivaldi-snapshot devhub protontricks ttf-raleway athenaeum-git auryo-bin snapd xpadneo-dkms-git recbox-ardour-theme-git unity-editor-beta blender-2.8-git lgogdownloader mandelbulber2-opencl-git onivim-git github-desktop-bin rpcs3-git vscodium-bin plasma5-applets-volumewin7mixer evince-no-gnome evesetup alltomp3-bin ardour-git  kwin-scripts-quarter-tiling-git gamehub-git streamlink-twitch-gui pamac-aur-git yuzu-canary-git citra-canary-git cemu' # My stuff
+			install_aur_package 'vivaldi-snapshot ludo tusk devhub protontricks ttf-raleway athenaeum-git snapd xpadneo-dkms-git recbox-ardour-theme-git unity-editor-beta blender-2.8-git lgogdownloader mandelbulber2-opencl-git onivim-git github-desktop-bin rpcs3-git vscodium-bin plasma5-applets-volumewin7mixer evince-no-gnome evesetup alltomp3-bin ardour-git  kwin-scripts-quarter-tiling-git gamehub-git streamlink-twitch-gui pamac-aur-git yuzu-canary-git citra-canary-git cemu' # My stuff
                         systemctl start snapd.socket
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
 			systemctl enable snapd.socket

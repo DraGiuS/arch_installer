@@ -438,6 +438,8 @@ fi
                         pacman -U davinci-resolve-beta-16.0b3-1-any.pkg.tar.xz
 			wget https://github.com/DraGiuS/Lyricfier-PKGBUILD/releases/download/0.3.0/lyricfier-0.3.0-1-x86_64.pkg.tar.xz
 			pacman -U lyricfier-0.3.0-1-x86_64.pkg.tar.xz
+			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
+			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
 			install_aur_package 'vivaldi-snapshot elisa-git deezloader-remix-bin ludo tusk devhub protontricks ttf-raleway athenaeum-git snapd xpadneo-dkms-git recbox-ardour-theme-git unity-editor-beta blender-2.8-git lgogdownloader mandelbulber2-opencl-git onivim-git github-desktop-bin rpcs3-git vscodium-bin plasma5-applets-volumewin7mixer evince-no-gnome evesetup alltomp3-bin ardour-git  kwin-scripts-quarter-tiling-git streamlink-twitch-gui pamac-aur-git yuzu-canary-git citra-canary-git cemu' # My stuff
                         systemctl start snapd.socket

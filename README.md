@@ -153,7 +153,7 @@ cd arch_installer
 * https://github.com/Zren/plasma-applet-volumewin7mixer
 * https://github.com/JNuutinen/plasma-minimalmenu
 * https://github.com/divinae/uswitch
-* https://github.com/bringmethecode/enkel-greeter
+* https://github.com/ffwff/modern
 * https://github.com/DraGiuS/conky-spoclo
 * https://github.com/arcticicestudio/nord-konsole
 * https://store.kde.org/p/1268541/

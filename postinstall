@@ -123,6 +123,7 @@ install_theme() { # {{{
 	cp wallhaven-r2o781.jpg /home
 	cp mystery.jpg /home
 	cp 12yuoy7p8sr21.png /home
+	cp 9GmvnMj.png /home
 	cp 505851.jpg /home
 	cp deer.png /home
 	cp photo-1511108988782-9a5c10cbc062.jpg /home

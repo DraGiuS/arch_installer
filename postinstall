@@ -232,6 +232,27 @@ install_aur_helper() { # {{{
 	enter_to_continue
 }
 # }}}
+
+install_plymouth() { # (((
+                          print_title 'PLYMOUTH'
+                          print_info 'it will install plymouth with the gnu-meditate theme by default'
+			  install_aur_package 'plymouth'
+			  cp mkinitcpio.conf /etc/
+			  mkinitcpio -p linux
+			  cp -r gnu-meditate /usr/share/plymouth/themes
+			  sed -i 's/spinner/gnu-meditate/' /etc/plymouth/plymouthd.conf
+			  sed -i 's/5/0/' /etc/plymouth/plymouthd.conf
+                          plymouth-set-default-theme -R gnu-meditate
+			  
+			  
+	echo "Plymouth succesfully installed"
+
+enter_to_continue 
+
+}
+# }}}
+		  
+			  
 install_base() { # {{{
 	print_progress 'Install networkmanager'
 	install_package 'networkmanager'
@@ -332,7 +353,7 @@ install_display_manager() { # {{{
 	print_progress 'Install display manager'
 	install_package 'lightdm-webkit2-greeter'
 	
-	systemctl enable lightdm
+	systemctl enable lightdm-plymouth
 	cd /usr/share/lightdm-webkit/themes/
 	git clone https://github.com/ffwff/modern
         sed -i 's/antergos/modern/' /etc/lightdm/lightdm-webkit2-greeter.conf
@@ -688,19 +709,20 @@ install() { # {{{
         echo "    1. $(mainmenu_item "${checklist[1]}"  'Create user account' "$USERNAME")"
 		echo "    2. $(mainmenu_item "${checklist[2]}"  'Set keyboard layout' "$LAYOUT")"
 		echo "    3. $(mainmenu_item "${checklist[3]}"  'Install AUR helper')"
-		echo "    4. $(mainmenu_item "${checklist[4]}"  'Kde unstable')"
-		echo "    5. $(mainmenu_item "${checklist[5]}"  'Install desktop environment' "$DESKTOP_ENVIRONMENT")"
-		echo "    6. $(mainmenu_item "${checklist[6]}"  'Install your favorites gog games')"
-		echo "    7. $(mainmenu_item "${checklist[7]}"  'Install translation')"
-		echo "    8. $(mainmenu_item "${checklist[8]}"  'Install base')"
-		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install xanmod latest kernel')"
-		echo "   10. $(mainmenu_item "${checklist[10]}"  'Setup dotfiles')"
-		echo "   11. $(mainmenu_item "${checklist[11]}" 'Install fonts')"
-		echo "   12. $(mainmenu_item "${checklist[12]}" 'Setup of Zsh with powerlevel9k')"
-		echo "   13. $(mainmenu_item "${checklist[13]}" 'Install bumblebee for laptop')"
-		echo "   14. $(mainmenu_item "${checklist[14]}" 'Set up for android development')"
-		echo "   15. $(mainmenu_item "${checklist[15]}" 'Ending script')"
-		echo "   16. $(mainmenu_item "${checklist[16]}" 'Finish')"
+		echo "    4. $(mainmenu_item "${checklist[4]}"  'Install plymouth')"
+		echo "    5. $(mainmenu_item "${checklist[5]}"  'Kde unstable')"
+		echo "    6. $(mainmenu_item "${checklist[6]}"  'Install desktop environment' "$DESKTOP_ENVIRONMENT")"
+		echo "    7. $(mainmenu_item "${checklist[7]}"  'Install your favorites gog games')"
+		echo "    8. $(mainmenu_item "${checklist[8]}"  'Install translation')"
+		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install base')"
+		echo "   10. $(mainmenu_item "${checklist[10]}"  'Install xanmod latest kernel')"
+		echo "   11. $(mainmenu_item "${checklist[11]}"  'Setup dotfiles')"
+		echo "   12. $(mainmenu_item "${checklist[12]}" 'Install fonts')"
+		echo "   13. $(mainmenu_item "${checklist[13]}" 'Setup of Zsh with powerlevel9k')"
+		echo "   14. $(mainmenu_item "${checklist[14]}" 'Install bumblebee for laptop')"
+		echo "   15. $(mainmenu_item "${checklist[15]}" 'Set up for android development')"
+		echo "   16. $(mainmenu_item "${checklist[16]}" 'Ending script')"
+		echo "   17. $(mainmenu_item "${checklist[17]}" 'Finish')"
 		echo
 
 		read -p "Enter option (0-14): " OPTION
@@ -722,57 +744,60 @@ install() { # {{{
 				install_aur_helper
 				checklist[3]=1
 				;;
-			4)
-			        kde_unstable
+			4)  	install_plymouth
 			        checklist[4]=1
 				;;
 			5)
-				install_desktop_environment
-				checklist[5]=1
+			        kde_unstable
+			        checklist[5]=1
 				;;
-		        6)		
-				install_gog_games
+			6)
+				install_desktop_environment
 				checklist[6]=1
 				;;
-			7)
-			        install_translation
+		        7)		
+				install_gog_games
 				checklist[7]=1
 				;;
-			8)	
-				install_base
+			8)
+			        install_translation
 				checklist[8]=1
 				;;
-			9) 
-			        install_xanmod
-			        checklist[9]=1
+			9)	
+				install_base
+				checklist[9]=1
 				;;
-			10)
-				setup_dotfiles
-				checklist[10]=1
+			10) 
+			        install_xanmod
+			        checklist[10]=1
 				;;
 			11)
-				install_fonts
+				setup_dotfiles
 				checklist[11]=1
 				;;
-			12)	
-				setup_zsh
+			12)
+				install_fonts
 				checklist[12]=1
 				;;
-			13)
-			        setup_bumblebee
+			13)	
+				setup_zsh
 				checklist[13]=1
 				;;
-				
-			14)     setup_android_dev
-			        checklist[14]=1
+			14)
+			        setup_bumblebee
+				checklist[14]=1
 				;;
-		        15)    
-			        ending_script
+				
+			15)     setup_android_dev
 			        checklist[15]=1
 				;;
-			16)
+		        16)    
+			        ending_script
+			        checklist[16]=1
+				;;
+			17)
 				finish
-				checklist[16]=1
+				checklist[17]=1
 				;;
 			*)
 				invalid_option

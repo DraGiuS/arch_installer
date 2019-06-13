@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=gnu-meditate
+Description=A Plymouth of OS X Yosemite
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/gnu-meditate
+ScriptFile=/usr/share/plymouth/themes/gnu-meditate/gnu-meditate.script

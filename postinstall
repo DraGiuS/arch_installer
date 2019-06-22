@@ -670,8 +670,9 @@ ending_script() { # {{
     read answer
     if [ "$answer" = 'y' ]
     then
-    su "$USER" bash <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/goggalaxy.sh)
-    su "$USER" bash <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/EpicGamesStore.sh)
+    su "$USER" <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/goggalaxy.sh)
+    su "$USER" <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/EpicGamesStore.sh)
+    fi
     cd /home/"$USER"/
     mkdir flatpak
     cd flatpak
@@ -732,7 +733,7 @@ install() { # {{{
 		echo "   17. $(mainmenu_item "${checklist[17]}" 'Finish')"
 		echo
 
-		read -p "Enter option (0-14): " OPTION
+		read -p "Enter option (0-17): " OPTION
 
 		case "$OPTION" in
 			0)

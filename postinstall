@@ -670,8 +670,8 @@ ending_script() { # {{
     read answer
     if [ "$answer" = 'y' ]
     then
-    su "$USER" <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/goggalaxy.sh)
-    su "$USER" <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/EpicGamesStore.sh)
+    su "$USER" goggalaxy.sh
+    su "$USER" EpicGamesStore.sh
     fi
     cd /home/"$USER"/
     mkdir flatpak

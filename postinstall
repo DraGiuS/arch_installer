@@ -666,6 +666,12 @@ setup_android_dev() { # {{
 ending_script() { # {{
     print_info 'Installing needed applets and install some flatpak and snap apps'
     read -p 'USER: ' USER
+    echo -n "Do you want epic game store and gog galaxy ? (y/n): "
+    read answer
+    if [ "$answer" = 'y' ]
+    then
+    su "$USER" bash <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/goggalaxy.sh)
+    su "$USER" bash <(curl -s https://raw.githubusercontent.com/felipefacundes/desktop/master/wine-jogos/EpicGamesStore.sh)
     cd /home/"$USER"/
     mkdir flatpak
     cd flatpak

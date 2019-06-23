@@ -673,6 +673,32 @@ ending_script() { # {{
     su "$USER" goggalaxy.sh
     su "$USER" EpicGamesStore.sh
     fi
+    echo -n "Do you want a virtual installation of macOS ? (y/n): "
+    read answer
+    if [ "$answer" = 'y' ]
+    then
+    install_package 'qemu python python-pip virt-manager'
+    cd /home/"$USER"/
+    git clone https://github.com/foxlet/macOS-Simple-KVM
+    cd macOS-Simple-KVM
+    qemu-img create -f qcow2 MyDisk.qcow2 64G
+    echo '-drive id=SystemDisk,if=none,file=MyDisk.qcow2 \' >> basic.sh
+    echo '-device ide-hd,bus=sata.4,drive=SystemDisk \' >> basic.sh
+    fi
+    echo -n "Which version ? (high-sierra/mojave/catalina): "
+    read answer
+    if [ "$answer" = 'high-sierra' ]
+    then
+    su "$USER" -c "./jumpstart.sh --high-sierra"
+    
+    elif [ "$answer" = 'mojave' ]
+    then 
+    su  "$USER" -c "./jumpstart.sh --mojave"
+    
+    elif [ "$answer" = 'catalina' ]
+    then 
+    su "$USER" -c "./jumpstart.sh --catalina"
+    fi
     cd /home/"$USER"/
     mkdir flatpak
     cd flatpak

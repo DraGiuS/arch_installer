@@ -355,7 +355,7 @@ install_display_manager() { # {{{
 	print_progress 'Install display manager'
 	install_package 'lightdm-webkit2-greeter'
 	
-	systemctl enable lightdm-plymouth
+	systemctl enable lightdm
 	cd /usr/share/lightdm-webkit/themes/
 	git clone https://github.com/ffwff/modern
         sed -i 's/antergos/modern/' /etc/lightdm/lightdm-webkit2-greeter.conf

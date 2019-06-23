@@ -679,8 +679,8 @@ ending_script() { # {{
     then
     install_package 'qemu python python-pip virt-manager'
     cd /home/"$USER"/
-    su "$USER' -c "git clone https://github.com/foxlet/macOS-Simple-KVM
-    cd macOS-Simple-KVM"
+    su "$USER" -c "git clone https://github.com/foxlet/macOS-Simple-KVM"
+    cd macOS-Simple-KVM
     qemu-img create -f qcow2 MyDisk.qcow2 64G
     echo '-drive id=SystemDisk,if=none,file=MyDisk.qcow2 \' >> basic.sh
     echo '-device ide-hd,bus=sata.4,drive=SystemDisk \' >> basic.sh

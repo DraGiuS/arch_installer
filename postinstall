@@ -712,6 +712,7 @@ ending_script() { # {{
     snap install zenkit
     snap install cavestory
     snap install gravit-designer
+    su "$USER" -c "wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh"
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
     su  "$USER" ./installapplet.sh

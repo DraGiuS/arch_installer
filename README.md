@@ -142,6 +142,10 @@ cd arch_installer
 
 * Choose your own version of firefox 
 
+* Nano synthax highlighting
+
+* MacOS Virtualization with qemu
+
 #  Credits
 
 * [aui][1]
@@ -161,7 +165,8 @@ cd arch_installer
 * https://github.com/NearHuscarl/arch_installer
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/Sude-/lgogdownloader
-* https://github.com/DraGiuS/linux-xanmod-precompiled
+* https://github.com/DraGiuS/linux-precompiled
+* https://github.com/foxlet/macOS-Simple-KVM
 * Archlinux team
 * ME ('cause i love me)
 # License

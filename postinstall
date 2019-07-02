@@ -170,16 +170,14 @@ create_user_account() { # {{{
 	read -p 'Username: ' USERNAME
 	useradd -m -g users -G wheel -s /bin/bash "$USERNAME"
 	passwd "$USERNAME"
-        mkdir /home/"$USERNAME"/.config/conky
+        mkdir -p /home/"$USERNAME"/.conky
 	mkdir /home/"$USERNAME"/.config/autostart
         cd Skel/etc/skel
-	cp -r spoclo /home/"$USERNAME"/.config/conky/
+	cp -r spoclo /home/"$USERNAME"/.conky/
         cp conky.desktop /home/"$USERNAME"/.config/autostart/
 	cp .zshrc /home/"$USERNAME"/
 	cd ..
 	cd ..
-        mkdir -p /home/"$USERNAME"/.conky
-        cp -r spoclo /home/"$USERNAME"/.conky
 	mkdir -p /home/"$USERNAME"/.local/share/color-schemes/
 	cp OneDark.colors /home/"$USERNAME"/.local/share/color-schemes/
 	cp Neptune.colors /home/"$USERNAME"/.local/share/color-schemes/
@@ -195,7 +193,7 @@ create_user_account() { # {{{
 	mkdir Vidéos
 	mkdir Android
 	mkdir Aur
-	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur
+	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur .conky .config
 		
 	enter_to_continue
 }

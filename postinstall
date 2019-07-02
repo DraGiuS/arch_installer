@@ -147,6 +147,8 @@ install_theme() { # {{{
 	cp alena-aenami-skylight1920.jpg /home
 	cp wallhaven-275413.jpg /home
 	cp wall.jpg /home
+	cp lost.jpg /home
+	cp madness.png /home
 	mkdir -p /usr/share/aurorae/themes
 	cp -r Sweet-Dark-transparent /usr/share/aurorae/themes
         mkdir -p /usr/share/plasma/desktoptheme

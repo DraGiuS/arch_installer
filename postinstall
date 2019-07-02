@@ -116,6 +116,7 @@ install_theme() { # {{{
 	cp trillectro-aaron-campbell-1920×1080.jpg /home
 	cp wallhaven-748291.jpg /home
 	cp neon.jpg /home
+	cp wallhaven-13x79v.jpg /home
 	cp wallhaven-748524.jpg /home
 	cp wallhaven-748525.jpg /home
 	cp wallhaven-728479.jpg /home

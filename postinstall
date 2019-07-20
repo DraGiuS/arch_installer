@@ -361,8 +361,8 @@ install_display_manager() { # {{{
 	
 	systemctl enable lightdm
 	cd /usr/share/lightdm-webkit/themes/
-	git clone https://github.com/ffwff/modern
-        sed -i 's/antergos/modern/' /etc/lightdm/lightdm-webkit2-greeter.conf
+	git clone https://github.com/lassipulkkinen/lightdm-webkit2-theme
+        sed -i 's/antergos/lightdm-webkit2-theme/' /etc/lightdm/lightdm-webkit2-greeter.conf
 	sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 }
 # }}}

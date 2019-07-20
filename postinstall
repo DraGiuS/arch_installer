@@ -159,6 +159,7 @@ install_theme() { # {{{
 	cp -r 'Aex Nomad Dark' /usr/share/plasma/desktoptheme/
 	mkdir -p /usr/share/icons
 	cp -r TurkinOS /usr/share/icons/
+	cp -r Sweet-Purple-Filled /usr/share/icons/
 	cd etc/skel
 	cp wallhaven-698231.jpg /home
 	cp -r .config /etc/skel

@@ -706,7 +706,6 @@ ending_script() { # {{
     mkdir flatpak
     cd flatpak
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
-    flatpak install flathub org.phoenicis.playonlinux
     flatpak install flathub com.github.calo001.fondo
     snap refresh
     sleep 15 

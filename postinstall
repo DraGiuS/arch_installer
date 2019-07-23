@@ -111,6 +111,7 @@ install_theme() { # {{{
 	cp wallhaven-83rr62.jpg /home
 	cp wallpaper.jpeg /home
 	cp mirage1.jpg /home
+	cp artist_waves_colorful_129158_1920x1080.jpg /home
 	cp wallhaven-ymvm17.jpg /home
 	cp wallhaven-225486.png /home
 	cp The_Verge_Hysteresis_Wallpaper_Landscape.0.png /home

@@ -155,7 +155,7 @@ cd arch_installer
 * https://github.com/jsalatas/plasma-pstate
 * https://github.com/Polunom/mac-inline-battery
 * https://github.com/Zren/plasma-applet-volumewin7mixer
-* https://github.com/JNuutinen/plasma-minimalmenu
+* https://github.com/zren/plasma-applet-tiledmenu
 * https://github.com/divinae/uswitch
 * https://github.com/ffwff/modern
 * https://github.com/DraGiuS/conky-spoclo

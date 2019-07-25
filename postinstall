@@ -87,73 +87,7 @@ install_theme() { # {{{
         install_package 'breeze-gtk cantarell-fonts'
 	git clone https://github.com/DraGiuS/Skel
 	cd Skel
-	cp wallhaven-729362.jpg /home
-	cp CJGvajk.jpg /home
-	cp NBk6DnZ.png /home
-	cp WP_Constructed_XIII-2560x1440_00000.jpg /home
-	cp WP_Hydrometry_III-2560x1440_00000.jpg /home
-	cp WP_Staggitarius-2560x1440_00000.jpg /home
-	cp wallhaven-674454.jpg /home
-	cp wallhaven-614476.jpg /home
-	cp wallhaven-355344.png /home
-	cp wallhaven-526387.jpg /home
-	cp wallpaper.jpg /home
-	cp wallhaven-6k23rw.jpg /home
-	cp wallhaven-p8j1zm.jpg /home
-	cp rcLqZ4X.jpg /home
-	cp wallhaven-765912.png /home
-	cp binarymine-dribbble-01.png /home
-	cp Wg2f4T3.jpg /home
-	cp wallhaven-kwkklm.png /home
-        cp wallhaven-602455.jpg /home 	
-        cp wallhaven-757480.jpg /home 	
-        cp wallhaven-763087.jpg /home
-	cp wallhaven-83rr62.jpg /home
-	cp wallpaper.jpeg /home
-	cp mirage1.jpg /home
-	cp artist_waves_colorful_129158_1920x1080.jpg /home
-	cp wallhaven-ymvm17.jpg /home
-	cp wallhaven-225486.png /home
-	cp The_Verge_Hysteresis_Wallpaper_Landscape.0.png /home
-	cp wallhaven-657318.jpg /home
-	cp SpacesMaster.jpg /home
-	cp trillectro-aaron-campbell-1920×1080.jpg /home
-	cp wallhaven-748291.jpg /home
-	cp neon.jpg /home
-	cp wallhaven-13x79v.jpg /home
-	cp wallhaven-748524.jpg /home
-	cp wallhaven-748525.jpg /home
-	cp wallhaven-728479.jpg /home
-	cp wallhaven-591780.jpg /home
-	cp wallhaven-741273.jpg /home
-	cp wallhaven-731zm3.jpg /home
-	cp wallhaven-r2o781.jpg /home
-	cp mystery.jpg /home
-	cp 12yuoy7p8sr21.png /home
-	cp 9GmvnMj.png /home
-	cp 505851.jpg /home
-	cp deer.png /home
-	cp photo-1511108988782-9a5c10cbc062.jpg /home
-	cp batman-the-dark-knight-minimal-ac-1920x1080.jpg /home
-	cp fzMlxeU.png /home
-	cp wallhaven-767749.png /home
-	cp rWkySxQ.jpg /home
-	cp 6ctk278yg3621.png /home
-	cp lioness.jpg /home
-	cp 9elo.jpg /home
-        cp spacerecordsnwt.png /home
-        cp Cocoon.png /home
-        cp wallhaven-r2oq8w.jpg /home
-        cp wallhaven-13xq5g.jpg /home
-        cp pYCiDkS.jpg /home
-	cp Polygon-Wallpaper-2.jpg /home
-	cp Polygon-Wallpaper-26.jpg /home
-	cp tj-holowaychuk-403737-unsplash.jpg /home
-	cp alena-aenami-skylight1920.jpg /home
-	cp wallhaven-275413.jpg /home
-	cp wall.jpg /home
-	cp lost.jpg /home
-	cp madness.png /home
+	cp -r Walls /home
 	mkdir -p /usr/share/aurorae/themes
 	cp -r Sweet-Dark-transparent /usr/share/aurorae/themes
         mkdir -p /usr/share/plasma/desktoptheme

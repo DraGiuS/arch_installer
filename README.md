@@ -160,7 +160,6 @@ cd arch_installer
 * https://github.com/divinae/uswitch
 * https://github.com/DraGiuS/conky-spoclo
 * https://github.com/arcticicestudio/nord-konsole
-* https://store.kde.org/p/1268541/
 * https://github.com/Jazqa/kwin-quarter-tiling
 * https://github.com/NearHuscarl/arch_installer
 * https://github.com/robbyrussell/oh-my-zsh

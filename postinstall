@@ -89,10 +89,11 @@ install_theme() { # {{{
 	cd Skel
 	cp -r Walls /home
 	mkdir -p /usr/share/aurorae/themes
-	cp -r Sweet-Dark-transparent /usr/share/aurorae/themes
+	cp -r dot /usr/share/aurorae/themes
         mkdir -p /usr/share/plasma/desktoptheme
         cp -r 'Aex Nomad' /usr/share/plasma/desktoptheme/
 	cp -r 'Aex Nomad Dark' /usr/share/plasma/desktoptheme/
+	cp -r Aex_Dark_Blue /usr/share/plasma/desktoptheme/
 	mkdir -p /usr/share/icons
 	cp -r TurkinOS /usr/share/icons/
 	cd etc/skel

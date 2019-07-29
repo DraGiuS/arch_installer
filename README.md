@@ -159,6 +159,7 @@ cd arch_installer
 * https://github.com/zren/plasma-applet-tiledmenu
 * https://github.com/divinae/uswitch
 * https://github.com/DraGiuS/conky-spoclo
+* https://github.com/pencap/blur6-splash-screen
 * https://github.com/arcticicestudio/nord-konsole
 * https://github.com/Jazqa/kwin-quarter-tiling
 * https://github.com/NearHuscarl/arch_installer

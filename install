@@ -215,6 +215,9 @@ mount_partitions() { # {{{
 
 	mount "$ROOT_PARTITION" "$MOUNTPOINT"
 	btrfs subvolume create "$MOUNTPOINT/@root"
+	o=defaults,x-mount.mkdir
+	o_btrfs=$o,compress=lzo,ssd,noatime
+	mount -t btrfs -o subvol=root,$o_btrfs /mnt
 
 	mkdir -p "$MOUNTPOINT/home"
 	mount "$HOME_PARTITION" "$MOUNTPOINT/home"

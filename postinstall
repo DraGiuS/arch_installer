@@ -87,6 +87,8 @@ install_theme() { # {{{
         install_package 'breeze-gtk cantarell-fonts'
 	git clone https://github.com/DraGiuS/Skel
 	cd Skel
+	mkdir -p /usr/share/plasma/look-and-feel/
+	cp -r com.blur6 /usr/share/plasma/look-and-feel/
 	cp -r Walls /home
 	mkdir -p /usr/share/aurorae/themes
 	cp -r dot /usr/share/aurorae/themes

@@ -17,7 +17,6 @@
 - [Introduction](#introduction)
 - [Screenshots](#screenshots)
 - [Detail](#detail)
-- [Usage](#usage)
 - [MyChanges](#mychanges)
 - [Credits](#credits)
 - [License](#license)
@@ -58,40 +57,8 @@ Currently, the desktop look like this :
 * I recommend 30G to be not worried
 * I currently use KDE so the code installing i3 and xfce4 is not tested yet
 
-#  Usage
-
-* Download arch ISO file from [here][2]
-* Use [rufus][3] (most stable to me) to make a bootable USB using the arch image
-* Reboot to the usb
-* Get the script and run it
-
 **Note:** You should install in the correct order from 1-n because I did not
 check all cases
-
-```bash 
-
-# if you use wifi, if not, then check out the next part
-
-rfkill unblock all
-
-wifi-menu 
-
-```
-
-```bash
-
-
-pacman -Sy git
-
-git clone https://github.com/DraGiuS/arch_installer
-
-cd arch_installer
-
-it's recommended to edit the "common" file
-
-./install
-
-```
 
 * After installing the base system choose finish to reboot. Clone the repo then go to it and run the other script
 
@@ -104,6 +71,9 @@ cd arch_installer
 ```
 
 # MyChanges
+
+* LVM by default
+
 * Support of bumblebee and vulkan with primus-vk
 
 * Kde unstable option

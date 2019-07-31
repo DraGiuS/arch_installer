@@ -596,9 +596,10 @@ setup_bootloader() { # {{{
 
 	print_progress 'Install grub'
 	# arch_chroot "grub-install $DEVICE"
+	systemctl enable lvm2-lvmetad.service
 	sed -i "s/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=\"cryptdevice=\/dev\/mapper\/MyVol-lvroot:root root=\/dev\/mapper\/root\"/g" /etc/default/grub
 	echo "GRUB_ENABLE_CRYPTODISK=y" >> /etc/default/grub
-    echo 'GRUB_PRELOAD_MODULES="lvm luks cryptodisk"' >> /etc/default/grub
+        echo 'GRUB_PRELOAD_MODULES="lvm luks cryptodisk"' >> /etc/default/grub
 	arch_chroot "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=$boot_id --recheck"
 
 	print_progress 'Install theme for grub'

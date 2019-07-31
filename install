@@ -196,10 +196,8 @@ format_partitions() { # {{{
           		  vgcreate MyVol "$ROOT_PARTITION"
 			  lvcreate -L 60G -n lvroot MyVol
                           lvcreate -l 100%FREE -n storage MyVol
-		          cryptsetup luksFormat -c aes-xts-plain64 -s 512 /dev/mapper/MyVol-lvroot
-			  cryptsetup open /dev/mapper/MyVol-lvroot root
-			  mkfs.btrfs /dev/mapper/root
-                          mkfs.xfs /dev/mapper/storage
+			  mkfs.btrfs /dev/MyVol/lvroot
+                          mkfs.xfs /dev/MyVol/storage
 
 
 	      fsck "$ROOT_PARTITION"
@@ -223,18 +221,12 @@ format_partitions() { # {{{
 mount_partitions() { # {{{
 	print_progress 'Mounting partitions..'
 
-	mount /dev/mapper/root "$MOUNTPOINT"
-	mount | grep -w '/dev/mapper/root' 
-	if [[ $? != 0 ]]; then
-	        warning "\n[-] Crypted volume (lvm-root) not created, try again"
-	        warning "[-] Installation canceled"
-	exit
-    fi
+	mount /dev/MyVol/lvroot "$MOUNTPOINT"
 
 	mkdir -p "$MOUNTPOINT/home"
 	mount "$HOME_PARTITION" "$MOUNTPOINT/home"
         mkdir -p "$MOUNTPOINT/home/storage"
-        mount /dev/mapper/storage /home/storage 
+        mount /dev/mapper/storage "$MOUNTPOINT/home/storage"
  
 
 	mkdir -p "$MOUNTPOINT/boot"
@@ -577,7 +569,7 @@ configure_mkinitcpio() { # {{{
 
 	echo
 	print_progress 'Create the initramfs image...'
-    sed -i "s/HOOKS=.*/HOOKS=\"base udev autodetect keyboard keymap modconf block lvm2 encrypt filesystems fsck\"/g" /etc/mkinitcpio.conf
+        sed -i "s/HOOKS=.*/HOOKS=\"base udev autodetect keyboard keymap modconf block lvm2 filesystems fsck\"/g" /etc/mkinitcpio.conf
 	arch_chroot 'mkinitcpio -p linux'
 
 	enter_to_continue
@@ -597,9 +589,8 @@ setup_bootloader() { # {{{
 	print_progress 'Install grub'
 	# arch_chroot "grub-install $DEVICE"
 	systemctl enable lvm2-lvmetad.service
-	sed -i "s/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=\"cryptdevice=\/dev\/mapper\/MyVol-lvroot:root root=\/dev\/mapper\/root\"/g" /etc/default/grub
-	echo "GRUB_ENABLE_CRYPTODISK=y" >> /etc/default/grub
-        echo 'GRUB_PRELOAD_MODULES="lvm luks cryptodisk"' >> /etc/default/grub
+	sed -i "s/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=\"root=\/dev\/MyVol\/lvroot\"/g" /etc/default/grub
+        echo 'GRUB_PRELOAD_MODULES="lvm"' >> /etc/default/grub
 	arch_chroot "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=$boot_id --recheck"
 
 	print_progress 'Install theme for grub'

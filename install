@@ -569,7 +569,7 @@ configure_mkinitcpio() { # {{{
 
 	echo
 	print_progress 'Create the initramfs image...'
-        cp mkinitcpio.conf /etc/
+        cp mkinitcpio.conf /mnt/etc/mkinitcpio.conf
         arch_chroot 'mkinitcpio -p linux'
 
 	enter_to_continue

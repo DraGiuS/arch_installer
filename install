@@ -192,7 +192,14 @@ format_partitions() { # {{{
 	      fsck "$BOOT_PARTITION"
 	  fi
 
-              yes | mkfs.btrfs -f "$ROOT_PARTITION"
+			  yes | pvcreate "$ROOT_PARTITION"
+		      vgcreate MyVol "$ROOT_PARTITION"
+			  lvcreate -L 100%FREE -n lvroot MyVol
+		      cryptsetup luksFormat -c aes-xts-plain64 -s 512 /dev/mapper/MyVol-lvroot
+			  cryptsetup open /dev/mapper/MyVol-lvroot root
+			  mkfs.btrfs /dev/mapper/root
+
+
 	      fsck "$ROOT_PARTITION"
      
      
@@ -203,6 +210,7 @@ format_partitions() { # {{{
 
 	  
 	     yes | mkswap "$SWAP_PARTITION"
+
 	     mount_partitions
          else  
             return
@@ -213,8 +221,13 @@ format_partitions() { # {{{
 mount_partitions() { # {{{
 	print_progress 'Mounting partitions..'
 
-	mount "$ROOT_PARTITION" "$MOUNTPOINT"
-	btrfs subvolume create "$MOUNTPOINT/@root"
+	mount /dev/mapper/root "$MOUNTPOINT"
+	mount | grep -w '/dev/mapper/root' 
+	if [[ $? != 0 ]]; then
+	        warning "\n[-] Crypted volume (lvm-root) not created, try again"
+	        warning "[-] Installation canceled"
+	exit
+    fi
 
 	mkdir -p "$MOUNTPOINT/home"
 	mount "$HOME_PARTITION" "$MOUNTPOINT/home"
@@ -559,6 +572,7 @@ configure_mkinitcpio() { # {{{
 
 	echo
 	print_progress 'Create the initramfs image...'
+    sed -i "s/HOOKS=.*/HOOKS=\"base udev autodetect keyboard keymap modconf block lvm2 encrypt filesystems fsck\"/g" /etc/mkinitcpio.conf
 	arch_chroot 'mkinitcpio -p linux'
 
 	enter_to_continue
@@ -577,6 +591,9 @@ setup_bootloader() { # {{{
 
 	print_progress 'Install grub'
 	# arch_chroot "grub-install $DEVICE"
+	sed -i "s/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=\"cryptdevice=\/dev\/mapper\/MyVol-lvroot:root root=\/dev\/mapper\/root\"/g" /etc/default/grub
+	echo "GRUB_ENABLE_CRYPTODISK=y" >> /etc/default/grub
+    echo 'GRUB_PRELOAD_MODULES="lvm luks cryptodisk"' >> /etc/default/grub
 	arch_chroot "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=$boot_id --recheck"
 
 	print_progress 'Install theme for grub'

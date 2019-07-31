@@ -193,11 +193,13 @@ format_partitions() { # {{{
 	  fi
 
 			  yes | pvcreate "$ROOT_PARTITION"
-		      vgcreate MyVol "$ROOT_PARTITION"
-			  lvcreate -L 100%FREE -n lvroot MyVol
-		      cryptsetup luksFormat -c aes-xts-plain64 -s 512 /dev/mapper/MyVol-lvroot
+          		  vgcreate MyVol "$ROOT_PARTITION"
+			  lvcreate -L 60G -n lvroot MyVol
+                          lvcreate -l 100%FREE -n storage MyVol
+		          cryptsetup luksFormat -c aes-xts-plain64 -s 512 /dev/mapper/MyVol-lvroot
 			  cryptsetup open /dev/mapper/MyVol-lvroot root
 			  mkfs.btrfs /dev/mapper/root
+                          mkfs.xfs /dev/mapper/storage
 
 
 	      fsck "$ROOT_PARTITION"
@@ -231,6 +233,9 @@ mount_partitions() { # {{{
 
 	mkdir -p "$MOUNTPOINT/home"
 	mount "$HOME_PARTITION" "$MOUNTPOINT/home"
+        mkdir -p "$MOUNTPOINT/home/storage"
+        mount /dev/mapper/storage /home/storage 
+ 
 
 	mkdir -p "$MOUNTPOINT/boot"
 	mount "$BOOT_PARTITION" "$MOUNTPOINT/boot"

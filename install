@@ -569,8 +569,8 @@ configure_mkinitcpio() { # {{{
 
 	echo
 	print_progress 'Create the initramfs image...'
-        sed -i "s/HOOKS=.*/HOOKS=\"base udev autodetect keyboard keymap modconf block lvm2 filesystems fsck\"/g" /etc/mkinitcpio.conf
-	arch_chroot 'mkinitcpio -p linux'
+        cp mkinitcpio.conf /etc/
+        arch_chroot 'mkinitcpio -p linux'
 
 	enter_to_continue
 }

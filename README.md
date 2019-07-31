@@ -51,12 +51,6 @@ Currently, the desktop look like this :
 
 # Detail
 
-* This script will only run on UEFI systems
-* At the beginning you have to choose 4 partitions for: root, home, boot and swap
-* After that it will format boot partition as fat32, /home in xfs (better for data), / in btrfs (with a subvolume @**root**)
-* I recommend 30G to be not worried
-* I currently use KDE so the code installing i3 and xfce4 is not tested yet
-
 **Note:** You should install in the correct order from 1-n because I did not
 check all cases
 

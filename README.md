@@ -104,6 +104,9 @@ cd arch_installer
 ```
 
 # MyChanges
+
+* LVM by default
+
 * Support of bumblebee and vulkan with primus-vk
 
 * Kde unstable option

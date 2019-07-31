@@ -226,7 +226,7 @@ mount_partitions() { # {{{
 	mkdir -p "$MOUNTPOINT/home"
 	mount "$HOME_PARTITION" "$MOUNTPOINT/home"
         mkdir -p "$MOUNTPOINT/home/storage"
-        mount /dev/mapper/storage "$MOUNTPOINT/home/storage"
+        mount /dev/MyVol/storage "$MOUNTPOINT/home/storage"
  
 
 	mkdir -p "$MOUNTPOINT/boot"

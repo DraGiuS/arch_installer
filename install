@@ -227,6 +227,7 @@ mount_partitions() { # {{{
 	mount "$HOME_PARTITION" "$MOUNTPOINT/home"
         mkdir -p "$MOUNTPOINT/home/storage"
         mount /dev/MyVol/storage "$MOUNTPOINT/home/storage"
+	chmod -R 777 "$MOUNTPOINT/home/storage"
  
 
 	mkdir -p "$MOUNTPOINT/boot"

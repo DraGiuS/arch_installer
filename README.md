@@ -190,11 +190,11 @@ cd arch_installer
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Dragius/arch_installer.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/Dragius/arch_installer.svg?style=social&logo=appveyor
 [contributors-url]: https://github.com/Dragius/arch_installer/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Dragius/arch_installer.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/Dragius/arch_installer.svg?style=social&logo=appveyor
 [forks-url]: https://github.com/Dragius/arch_installer/network/members
-[stars-shield]: https://img.shields.io/github/stars/Dragius/arch_installer.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/Dragius/arch_installer.svg?style=social&logo=appveyor
 [stars-url]: https://github.com/Dragius/arch_installer/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Dragius/arch_installer.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/Dragius/arch_installer.svg?style=social&logo=appveyor
 [issues-url]: https://github.com/Dragius/arch_installer/issues

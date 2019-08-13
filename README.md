@@ -9,15 +9,11 @@
     By archlinux user, for archlinux users
 </p>
    
- [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
-
-
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
  # Table of Contents
 
 - [Introduction](#introduction)
-- [Screenshots](#screenshots)
 - [Detail](#detail)
 - [Usage](#usage)
 - [MyChanges](#mychanges)
@@ -41,16 +37,6 @@ This script is heavily inspired from [aui][1], many functions and logic is copie
 from there, you should use that one instead as this one is customized to my
 machine and setup and not guarantee to work on your computer. [aui][1] is more
 customizable, well maintained and have more options than my script anyway
-
-# Screenshot 
-
-Here, the lightdm theme that you will get : 
-
-<img src=https://raw.githubusercontent.com/lassipulkkinen/lightdm-webkit2-theme/master/screenshots/screenshot1.png width="960"/>
-
-Currently, the desktop look like this : 
-
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.jpg width="960"/>
 
 # Detail
 
@@ -82,22 +68,8 @@ wifi-menu
 
 ```bash
 
-
-pacman -Sy git
-
-git clone https://github.com/DraGiuS/arch_installer
-
-cd arch_installer
-
-it's recommended to edit the "common" file
-
-./install
-
-```
-
 * After installing the base system choose finish to reboot. Clone the repo then go to it and run the other script
 
-```bash
 git clone -b postinstall https://github.com/DraGiuS/arch_installer
 
 cd arch_installer
@@ -184,17 +156,3 @@ cd arch_installer
 
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_large)
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/Dragius/arch_installer.svg?style=flat-square
-[contributors-url]: https://github.com/Dragius/arch_installer/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Dragius/arch_installer.svg?style=flat-square
-[forks-url]: https://github.com/Dragius/arch_installer/network/members
-[stars-shield]: https://img.shields.io/github/stars/Dragius/arch_installer.svg?style=flat-square
-[stars-url]: https://github.com/Dragius/arch_installer/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Dragius/arch_installer.svg?style=flat-square
-[issues-url]: https://github.com/Dragius/arch_installer/issues

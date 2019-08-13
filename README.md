@@ -9,6 +9,8 @@
     By archlinux user, for archlinux users
 </p>
    
+ [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
+
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
@@ -17,6 +19,7 @@
 - [Introduction](#introduction)
 - [Screenshots](#screenshots)
 - [Detail](#detail)
+- [Usage](#usage)
 - [MyChanges](#mychanges)
 - [Credits](#credits)
 - [License](#license)
@@ -51,8 +54,46 @@ Currently, the desktop look like this :
 
 # Detail
 
+* This script will only run on UEFI systems
+* At the beginning you have to choose 4 partitions for: root, home, boot and swap
+* After that it will format boot partition as fat32, /home in xfs (better for data), / in lvm ; two partitions : root and storage
+* Please have 60G minimum for the root partition
+* I currently use KDE so the code installing i3 and xfce4 is not tested yet
+
+#  Usage
+
+* Download arch ISO file from [here][2]
+* Use [rufus][3] (most stable to me) to make a bootable USB using the arch image
+* Reboot to the usb
+* Get the script and run it
+
 **Note:** You should install in the correct order from 1-n because I did not
 check all cases
+
+```bash 
+
+# if you use wifi, if not, then check out the next part
+
+rfkill unblock all
+
+wifi-menu 
+
+```
+
+```bash
+
+
+pacman -Sy git
+
+git clone https://github.com/DraGiuS/arch_installer
+
+cd arch_installer
+
+it's recommended to edit the "common" file
+
+./install
+
+```
 
 * After installing the base system choose finish to reboot. Clone the repo then go to it and run the other script
 
@@ -143,3 +184,17 @@ cd arch_installer
 
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_large)
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/Dragius/arch_installer.svg?style=flat-square
+[contributors-url]: https://github.com/Dragius/arch_installer/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dragius/arch_installer.svg?style=flat-square
+[forks-url]: https://github.com/Dragius/arch_installer/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dragius/arch_installer.svg?style=flat-square
+[stars-url]: https://github.com/Dragius/arch_installer/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dragius/arch_installer.svg?style=flat-square
+[issues-url]: https://github.com/Dragius/arch_installer/issues

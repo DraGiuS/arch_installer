@@ -9,6 +9,8 @@
     By archlinux user, for archlinux users
 </p>
    
+ [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
+
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
@@ -182,3 +184,17 @@ cd arch_installer
 
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDraGiuS%2Farch_installer?ref=badge_large)
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/Dragius/arch_installer.svg?style=flat-square
+[contributors-url]: https://github.com/Dragius/arch_installer/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dragius/arch_installer.svg?style=flat-square
+[forks-url]: https://github.com/Dragius/arch_installer/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dragius/arch_installer.svg?style=flat-square
+[stars-url]: https://github.com/Dragius/arch_installer/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dragius/arch_installer.svg?style=flat-square
+[issues-url]: https://github.com/Dragius/arch_installer/issues

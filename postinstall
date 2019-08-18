@@ -233,10 +233,23 @@ install_base() { # {{{
 }
 # }}}
 
-install_xanmod() { # {{{
+install_alternative() { # {{{
 
-wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.1/linux-xanmod-5.2.1-1-x86_64.pkg.tar.xz
-wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.1/linux-xanmod-headers-5.2.1-1-x86_64.pkg.tar.xz
+    echo -n "Do you want xanmod kernel ? (y/n): "
+    read answer
+    if [ "$answer" = 'y' ]
+    then
+    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.1/linux-xanmod-5.2.1-1-x86_64.pkg.tar.xz
+    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.1/linux-xanmod-headers-5.2.1-1-x86_64.pkg.tar.xz
+    fi
+    echo -n "Do you want fsync kernel ? (y/n): "
+    read answer
+    if [ "$answer" = 'y' ]
+    then
+    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.8/linux-fsync-5.2.8.arch1-1-x86_64.pkg.tar.xz
+    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.8/linux-fsync-headers-5.2.8.arch1-1-x86_64.pkg.tar.xz
+    fi
+    
 pacman -U *.pkg.tar.xz
 grub-mkconfig -o /boot/grub/grub.cfg
 rm *.pkg.tar.xz
@@ -688,7 +701,7 @@ install() { # {{{
 		echo "    7. $(mainmenu_item "${checklist[7]}"  'Install your favorites gog games')"
 		echo "    8. $(mainmenu_item "${checklist[8]}"  'Install translation')"
 		echo "    9. $(mainmenu_item "${checklist[9]}"  'Install base')"
-		echo "   10. $(mainmenu_item "${checklist[10]}"  'Install xanmod latest kernel')"
+		echo "   10. $(mainmenu_item "${checklist[10]}"  'Install alternative kernel')"
 		echo "   11. $(mainmenu_item "${checklist[11]}"  'Setup dotfiles')"
 		echo "   12. $(mainmenu_item "${checklist[12]}" 'Install fonts')"
 		echo "   13. $(mainmenu_item "${checklist[13]}" 'Setup of Zsh with powerlevel9k')"
@@ -741,7 +754,7 @@ install() { # {{{
 				checklist[9]=1
 				;;
 			10) 
-			        install_xanmod
+			        install_alternative
 			        checklist[10]=1
 				;;
 			11)

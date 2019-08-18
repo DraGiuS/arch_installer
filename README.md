@@ -139,7 +139,7 @@ cd arch_installer
 
 * Changed default gtk theme
 
-* Alternative kernel (Xanmod Kernel)
+* Alternative kernel (Xanmod Kernel/Fsync)
 
 * Vscode config
 

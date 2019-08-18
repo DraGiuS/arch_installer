@@ -143,6 +143,7 @@ cd arch_installer
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/Sude-/lgogdownloader
 * https://github.com/DraGiuS/linux-precompiled
+* http://repo.steampowered.com/arch/valveaur/
 * https://github.com/foxlet/macOS-Simple-KVM
 * Archlinux team
 * ME ('cause i love me)

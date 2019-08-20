@@ -127,6 +127,7 @@ create_user_account() { # {{{
 	cp Neptune.colors /home/"$USERNAME"/.local/share/color-schemes/
 	mkdir -p /usr/share/themes
         cp -r 'greeny-dark' /usr/share/themes/
+	cp -r 'Sugar-Punch' /usr/share/themes/
 	cd /home/"$USERNAME"
 	mkdir Bureau
 	mkdir Documents

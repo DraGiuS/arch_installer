@@ -410,7 +410,7 @@ fi
 			install_package 'qalculate-gtk' # calculator	
 			install_package 'plasma-vault' # encryption
 			install_package 'wget discover qt5 kio-extras okular plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
-	                install_package 'flatpak numlockx zeal unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs flatpak-builder bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libisoburn libpng12 lib32-libpng12 xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris mupen64plus steam obs-studio thunderbird dolphin-emu obs-studio pycharm-community-edition' # Stuff
+	                install_package 'flatpak numlockx zeal unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs flatpak-builder bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libisoburn libpng12 lib32-libpng12 xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris steam obs-studio thunderbird dolphin-emu obs-studio pycharm-community-edition' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 htmlcxx lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
 			install_package 'overgrive downgrade discord spotify inxi' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation

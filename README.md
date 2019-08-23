@@ -151,6 +151,8 @@ cd arch_installer
 
 * MacOS Virtualization with qemu
 
+* Spotify themed with spicetify 
+
 #  Credits
 
 * [aui][1]
@@ -173,6 +175,7 @@ cd arch_installer
 * https://github.com/DraGiuS/linux-precompiled
 * http://repo.steampowered.com/arch/valveaur/
 * https://github.com/foxlet/macOS-Simple-KVM
+* https://github.com/TheTeamByte/Spotify-Themes
 * Archlinux team
 * ME ('cause i love me)
 # License

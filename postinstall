@@ -347,8 +347,8 @@ kde_unstable() { # {{{
                 print_info 'If you want KDE unstable you gonna install it'
 	       
 	        cp /root/arch_installer/pacman.conf /etc/pacman.conf
-                pacman-key --recv-key EA50C866329648EE
-                pacman-key --lsign-key EA50C866329648EE
+                pacman-key --recv-key EA50C866329648EE 
+                pacman-key --lsign-key EA50C866329648EE 
 		pacman -Syy
 }
 # }}}

@@ -324,7 +324,7 @@ install_base() { # {{{
 	# see https://bbs.archlinux.org/viewtopic.php?pid=1384654#p1384654
 	rm "$MOUNTPOINT/boot/vmlinuz-linux" 2> /dev/null
 
-	pacstrap "$MOUNTPOINT" base base-devel
+	pacstrap "$MOUNTPOINT" base base-devel nano linux-lts linux-lts-headers
 	pacstrap "$MOUNTPOINT" dialog wpa_supplicant networkmanager # if you use wifi in the live system, you will also need this
 
 	print_progress 'setup network for the new system'
@@ -566,12 +566,12 @@ configure_mkinitcpio() { # {{{
 	print_info 'mkinitcpio is a Bash script used to create an initial ramdisk environment.'
 	print_info 'Creating a new initramfs is usually not required, because mkinitcpio was run on installation of the linux package with pacstrap.'
 	print_info 'For special configurations, modify the /etc/mkinitcpio.conf file and recreate the initramfs image:'
-	echo -e "\t${GREEN}mkinitcpio -p linux${RESET}"
+	echo -e "\t${GREEN}mkinitcpio -p linux-lts${RESET}"
 
 	echo
 	print_progress 'Create the initramfs image...'
         cp mkinitcpio.conf /mnt/etc/mkinitcpio.conf
-        arch_chroot 'mkinitcpio -p linux'
+        arch_chroot 'mkinitcpio -p linux-lts'
 
 	enter_to_continue
 }

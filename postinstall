@@ -435,7 +435,7 @@ fi
 
 			
 			
-			setup_xinitrc 'startkde'
+			setup_xinitrc 'startplasma-x11'
 			;;
 		XFCE)
 			install_package 'xfce4 xfce4-goodies xarchiver'flatpak remote-add --user --no-gpg-verify chrome http://blog.kukuh.syafaat.id/google-chrome-flatpak-repo-testing/repo

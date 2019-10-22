@@ -417,8 +417,8 @@ fi
 			install_package 'overgrive discord spotify inxi' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
-                        wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/16.0b7/davinci-resolve-beta-16.0b7-1-any.pkg.tar.xz
-                        pacman -U davinci-resolve-beta-16.0b7-1-any.pkg.tar.xz
+                        wget https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD/releases/download/16.1/davinci-resolve-16.1-1-any.pkg.tar.xz
+                        pacman -U davinci-resolve-beta-16.1-1-any.pkg.tar.xz
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			wget https://github.com/DraGiuS/alienarena-svn/releases/download/master/alienarena-svn-r5655-3-x86_64.pkg.tar.xz

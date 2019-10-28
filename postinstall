@@ -242,8 +242,8 @@ install_alternative() { # {{{
     read answer
     if [ "$answer" = 'y' ]
     then
-    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.1/linux-xanmod-5.2.1-1-x86_64.pkg.tar.xz
-    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.2.1/linux-xanmod-headers-5.2.1-1-x86_64.pkg.tar.xz
+    wget https://github.com/DraGiuS/linux-precompiled/releases/download/4.19.79-rt/linux-xanmod-rt-4.19.79-1-x86_64.pkg.tar.xz
+    wget https://github.com/DraGiuS/linux-precompiled/releases/download/4.19.79-rt/linux-xanmod-rt-headers-4.19.79-1-x86_64.pkg.tar.xz
     fi
     echo -n "Do you want fsync kernel ? (y/n): "
     read answer

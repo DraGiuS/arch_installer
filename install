@@ -188,7 +188,7 @@ format_partitions() { # {{{
 	confirm 'Confirm formatting partitions'
 	if [[ "$OPTION" == y ]]; then	
 	   if [[ "$FORMAT_BOOT_PARTITION" == 1 ]]; then
-	      yes | mkfs.vfat -f "$BOOT_PARTITION"
+	      yes | mkfs.vfat "$BOOT_PARTITION"
 	      fsck "$BOOT_PARTITION"
 	  fi
 
@@ -196,7 +196,7 @@ format_partitions() { # {{{
           		  vgcreate MyVol "$ROOT_PARTITION"
 			  lvcreate -L 60G -n lvroot MyVol
                           lvcreate -l 100%FREE -n storage MyVol
-			  mkfs.btrfs /dev/MyVol/lvroot
+			  mkfs.f2fs /dev/MyVol/lvroot
                           mkfs.xfs /dev/MyVol/storage
 
 

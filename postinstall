@@ -88,11 +88,10 @@ install_theme() { # {{{
 	git clone https://github.com/DraGiuS/Skel
 	cd Skel
 	mkdir -p /usr/share/plasma/look-and-feel/
-	cp -r com.blur6 /usr/share/plasma/look-and-feel/
 	cp -r Walls /home
 	mkdir -p /usr/share/aurorae/themes
 	cp -r dot /usr/share/aurorae/themes
-	cp -r Layn /usr/share/aurorae/themes
+	cp -r Layan /usr/share/aurorae/themes
         mkdir -p /usr/share/plasma/desktoptheme
         cp -r 'Aex Nomad' /usr/share/plasma/desktoptheme/
 	cp -r 'Aex Nomad Dark' /usr/share/plasma/desktoptheme/

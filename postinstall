@@ -386,7 +386,6 @@ fi
 			install_package 'kinfocenter neofetch' # see system information
 			install_package 'spectacle' # screenshot utility
 			install_package 'kcolorchooser' # color picker on desktop screen
-			install_package 'plasma5-applets-redshift-control' # redshift applet for KDE
 			install_package 'sddm-kcm' # sddm config gui for KDE
 			install_package 'qalculate-gtk' # calculator	
 			install_package 'plasma-vault' # encryption

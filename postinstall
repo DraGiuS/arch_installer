@@ -183,7 +183,7 @@ install_plymouth() { # (((
                           print_title 'PLYMOUTH'
                           print_info 'it will install plymouth with the gnu-meditate theme by default'
 			  install_aur_package 'plymouth'
-			  cp /root/arch_installre/mkinitcpio.conf /etc/
+			  cp /root/arch_installer/mkinitcpio.conf /etc/
 			  mkinitcpio -p linux
 			  cp -r /root/arch_installer/gnu-meditate /usr/share/plymouth/themes
 			  sed -i 's/spinner/gnu-meditate/' /etc/plymouth/plymouthd.conf

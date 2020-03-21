@@ -398,7 +398,7 @@ fi
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'vgrive spicetify-cli gtk3-nocsd-git m64py rivalcfg stuntrally-bin brackets-bin soundnode-youtube-dl unityhub deezloader-remix-bin ludo ttf-raleway snapd xpadneo-dkms-git recbox-ardour-theme-git unity-editor-beta lgogdownloader mandelbulber2-opencl-git onivim-git rpcs3-git vscodium-bin plasma5-applets-volumewin7mixer ardour-git streamlink-twitch-gui pamac-aur-git yuzu-canary-git citra-canary-git veloren cemu' # My stuff
+			install_aur_package 'vgrive spicetify-cli gtk3-nocsd-git m64py rivalcfg stuntrally-bin brackets-bin soundnode-youtube-dl unityhub deezloader-remix-bin ludo ttf-raleway snapd xpadneo-dkms-git recbox-ardour-theme-git unity-editor-beta lgogdownloader mandelbulber2-opencl-git onivim-git vscodium-bin plasma5-applets-volumewin7mixer ardour-git streamlink-twitch-gui pamac-aur-git yuzu-git citra-canary-git veloren cemu' # My stuff
                         systemctl start snapd.socket
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
 			systemctl enable snapd.socket

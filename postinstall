@@ -389,7 +389,7 @@ fi
 			install_package 'sddm-kcm' # sddm config gui for KDE
 			install_package 'qalculate-gtk' # calculator	
 			install_package 'plasma-vault' # encryption
-			install_package 'wget qt5 kio-extras okular kdenlive plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
+			install_package 'wget latte-dock qt5 kio-extras okular kdenlive plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
 	                install_package 'numlockx zeal unrar chromium virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libisoburn libpng12 lib32-libpng12 blender xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris libretro-ppsspp libretro-citra libretro-mupen64plus-next steam obs-studio thunderbird dolphin-emu obs-studio' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 htmlcxx lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
 			install_package 'discord spotify' #andontie-aur
@@ -577,7 +577,7 @@ setup_android_dev() { # {{
     print_info 'Your are going to set up an android selection of software for developing for this platform'
     read -p 'USER: ' USER
     install_aur_package 'android-sdk android-studio'
-    install_aur_package 'genymotion unity-editor-beta-android xamarin-android-git'
+    install_aur_package 'genymotion unity-editor-beta-android'
     
     export ANDROID_HOME=/opt/android-sdk
     groupadd sdkusers

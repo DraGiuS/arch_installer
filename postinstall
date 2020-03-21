@@ -397,8 +397,6 @@ fi
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
-			wget https://github.com/DraGiuS/alienarena-svn/releases/download/master/alienarena-svn-r5655-3-x86_64.pkg.tar.xz
-			pacman -U alienarena-svn-r5655-3-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
 			install_aur_package 'vgrive league-gothic-font spicetify-cli gtk3-nocsd-git m64py rivalcfg stuntrally-bin brackets-bin soundnode-youtube-dl unityhub deezloader-remix-bin ludo devhub ttf-raleway snapd xpadneo-dkms-git recbox-ardour-theme-git unity-editor-beta lgogdownloader mandelbulber2-opencl-git onivim-git rpcs3-git vscodium-bin plasma5-applets-volumewin7mixer ardour-git streamlink-twitch-gui pamac-aur-git yuzu-canary-git citra-canary-git veloren cemu' # My stuff
                         systemctl start snapd.socket

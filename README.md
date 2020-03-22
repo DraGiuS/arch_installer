@@ -91,8 +91,6 @@ cd arch_installer
 
 * Default setup of zsh with powerlevel9k
 
-* Quarter tiling for Plasma
-
 * Pamac
 
 * Keyboard layout support

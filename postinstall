@@ -209,7 +209,7 @@ install_base() { # {{{
 	install_package 'libreoffice-fresh gimp reflector openssh'
 
 	print_progress 'Install shell utilities'
-	install_package 'bash-completion ripgrep fd trash-cli'
+	install_package 'ripgrep fd'
 
 	enter_to_continue
 }
@@ -592,14 +592,8 @@ setup_android_dev() { # {{
 # }}}
 
 ending_script() { # {{
-    print_info 'Installing needed applets and install some flatpak and snap apps'
+    print_info 'Installing needed applets and install some snap apps'
     read -p 'USER: ' USER
-    echo -n "Do you want epic game store ? (y/n): "
-    read answer
-    if [ "$answer" = 'y' ]
-    then
-    su "$USER" EpicGamesStore.sh
-    fi
     echo -n "Do you want a virtual installation of macOS ? (y/n): "
     read answer
     if [ "$answer" = 'y' ]

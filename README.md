@@ -113,7 +113,7 @@ cd arch_installer
 
 * Added some packages, aur or not.. 
 
-* Support of Flatpak and snap packages by default
+* Support of snap packages by default
 
 * You can set up your android development easily 
 

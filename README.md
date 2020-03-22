@@ -79,8 +79,6 @@ cd arch_installer
 
 # MyChanges
 
-* LVM by default
-
 * Support of bumblebee and vulkan with primus-vk
 
 * Kde unstable option
@@ -88,8 +86,6 @@ cd arch_installer
 * Added some packages, aur or not.. 
 
 * Support of Flatpak and snap packages by default
-
-* Davinci Resolve and Unity Editor on the default install
 
 * You can set up your android development easily 
 

@@ -228,8 +228,8 @@ install_alternative() { # {{{
     read answer
     if [ "$answer" = 'y' ]
     then
-    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.3.5/linux-fsync-5.3.5.arch1-1-x86_64.pkg.tar.xz
-    wget https://github.com/DraGiuS/linux-precompiled/releases/download/5.3.5/linux-fsync-headers-5.3.5.arch1-1-x86_64.pkg.tar.xz
+    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-5.5.10.arch1-1-x86_64.pkg.tar.xz
+    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-headers-5.5.10.arch1-1-x86_64.pkg.tar.xz
     fi
     
 pacman -U *.pkg.tar.xz

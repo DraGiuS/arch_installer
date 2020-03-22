@@ -390,7 +390,7 @@ fi
 			install_package 'qalculate-gtk' # calculator	
 			install_package 'plasma-vault' # encryption
 			install_package 'wget latte-dock qt5 kio-extras okular kdenlive plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
-	                install_package 'numlockx zeal python-pip unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libisoburn libpng12 lib32-libpng12 blender xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris libretro-ppsspp libretro-citra libretro-mupen64plus-next steam obs-studio thunderbird dolphin-emu obs-studio' # Stuff
+	                install_package 'numlockx zeal python-pip unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libpng12 lib32-libpng12 blender xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris libretro-ppsspp libretro-citra libretro-mupen64plus-next steam obs-studio thunderbird dolphin-emu obs-studio' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 htmlcxx lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
 			install_package 'discord spotify' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
@@ -539,7 +539,6 @@ install_translation() { # {{{
 install_fonts() { # {{{
 	print_progress 'Install some nice fonts'
 
-	install_aur_package 'ttf-material-icons-git'
 	install_package 'ttf-inconsolata ttf-roboto ttf-font-awesome'
 		
 	enter_to_continue
@@ -605,7 +604,7 @@ ending_script() { # {{
     read answer
     if [ "$answer" = 'y' ]
     then
-    install_package 'qemu python python-pip virt-manager'
+    install_package 'qemu python virt-manager'
     cd /home/"$USER"/
     su "$USER" -c "git clone https://github.com/foxlet/macOS-Simple-KVM"
     cd macOS-Simple-KVM

@@ -154,17 +154,14 @@ cd arch_installer
 #  Credits
 
 * [aui][1]
-* https://github.com/DraGiuS/Davinci-Resolve-PKGBUILD
 * https://github.com/webbrandon/Surface-Boot-Themes
 * https://github.com/bhilburn/powerlevel9k
-* https://github.com/wsdfhjxc/virtual-desktop-bar
 * https://github.com/jsalatas/plasma-pstate
 * https://github.com/Polunom/mac-inline-battery
 * https://github.com/Zren/plasma-applet-volumewin7mixer
 * https://github.com/zren/plasma-applet-tiledmenu
 * https://github.com/divinae/uswitch
 * https://github.com/DraGiuS/conky-spoclo
-* https://github.com/pencap/blur6-splash-screen
 * https://github.com/arcticicestudio/nord-konsole
 * https://github.com/Jazqa/kwin-quarter-tiling
 * https://github.com/NearHuscarl/arch_installer

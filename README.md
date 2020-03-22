@@ -42,7 +42,7 @@ customizable, well maintained and have more options than my script anyway
 
 * This script will only run on UEFI systems
 * At the beginning you have to choose 4 partitions for: root, home, boot and swap
-* After that it will format boot partition as fat32, /home in xfs (better for data), / in lvm ; two partitions : root and storage
+* After that it will format boot partition as fat32, /home in xfs (better for data), / in btrfs w/ a subvolume named storage
 * Please have 60G minimum for the root partition
 * I currently use KDE so the code installing i3 and xfce4 is not tested yet
 

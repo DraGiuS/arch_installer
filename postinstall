@@ -117,11 +117,12 @@ create_user_account() { # {{{
 	passwd "$USERNAME"
         mkdir -p /home/"$USERNAME"/.conky
 	mkdir /home/"$USERNAME"/.config/autostart
-        cd Skel/etc/skel
+        cd
+        cd /root/arch_installer/Skel/etc/skel
 	cp -r spoclo /home/"$USERNAME"/.conky/
         cp conky.desktop /home/"$USERNAME"/.config/autostart/
 	cp .zshrc /home/"$USERNAME"/
-	cd ..
+	cd .. 
 	cd ..
 	mkdir -p /home/"$USERNAME"/.local/share/color-schemes/
 	cp OneDark.colors /home/"$USERNAME"/.local/share/color-schemes/

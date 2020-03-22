@@ -392,7 +392,7 @@ fi
 			install_package 'wget latte-dock qt5 kio-extras okular kdenlive plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
 	                install_package 'numlockx zeal python-pip unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libpng12 lib32-libpng12 blender xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris libretro-ppsspp libretro-citra libretro-mupen64plus-next steam obs-studio thunderbird dolphin-emu obs-studio' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 htmlcxx lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
-			install_package 'discord spotify' #andontie-aur
+			install_package 'discord godot spotify' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz

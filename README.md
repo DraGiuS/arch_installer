@@ -115,8 +115,6 @@ cd arch_installer
 
 * Support of Flatpak and snap packages by default
 
-* Davinci Resolve and Unity Editor on the default install
-
 * You can set up your android development easily 
 
 * Default setup of zsh with powerlevel9k

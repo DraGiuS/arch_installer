@@ -192,7 +192,7 @@ format_partitions() { # {{{
 	      fsck "$BOOT_PARTITION"
 	  fi
 
-	      yes | mkfs.btrfs "$ROOT_PARTITION"
+	      yes | mkfs.btrfs -f "$ROOT_PARTITION"
               fsck "$ROOT_PARTITION"
      
      

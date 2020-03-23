@@ -628,7 +628,6 @@ ending_script() { # {{
     snap refresh
     snap install zenkit
     snap install guiscrcpy --edge
-    snap install vidify-qt
     snap install gravit-designer
     su "$USER" -c "wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh"
     git clone https://github.com/dragius/skel /home/"$USER"/skel

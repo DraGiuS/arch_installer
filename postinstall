@@ -632,6 +632,7 @@ ending_script() { # {{
     su "$USER" -c "wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh"
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
+    su  "$USER" ./vscode_setup.sh 
     su  "$USER" ./installapplet.sh
 
 	enter_to_continue

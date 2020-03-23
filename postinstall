@@ -634,7 +634,7 @@ ending_script() { # {{
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
     cp enableFullscreen.js  ~/.config/spicetify/Extensions
-    cp hosts /etc/
+    sudo cp hosts /etc/
     su  "$USER" ./vscode_setup.sh 
     su  "$USER" ./installapplet.sh
 

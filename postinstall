@@ -599,7 +599,8 @@ ending_script() { # {{
     read answer
     if [ "$answer" = 'y' ]
     then
-    install_package 'qemu python virt-manager'
+    install_package 'qemu python'
+    systemctl enable libvirtd
     cd /home/"$USER"/
     su "$USER" -c "git clone https://github.com/foxlet/macOS-Simple-KVM"
     cd macOS-Simple-KVM

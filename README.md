@@ -77,6 +77,18 @@ cd arch_installer
 ./postinstall
 ```
 
+```bash
+
+* If you wish to theme spotify, then enter these commands 
+
+spicetify
+spicetify backup apply enable-devtool
+cd "$(dirname "$(spicetify -c)")/Themes"
+git clone https://github.com/khanhas/google-spicetify
+spicetify config current_theme google-spicetify; spicetify config color_scheme gow; spicetify apply
+spicetify update
+```
+
 # MyChanges
 
 * Support of bumblebee and vulkan with primus-vk

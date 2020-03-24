@@ -131,17 +131,7 @@ create_user_account() { # {{{
         cp -r 'greeny-dark' /usr/share/themes/
 	cp -r 'Sugar-Punch' /usr/share/themes/
 	cd /home/"$USERNAME"
-	mkdir Bureau
-	mkdir Documents
-	mkdir Jeux
-	mkdir 'Github Projects'
-	mkdir Images
-	mkdir Téléchargements
-	mkdir Vidéos
-	mkdir Android
-	mkdir Aur
-	mkdir Itch
-	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur Itch .conky .config
+	chmod -R 777 .conky .config .local
 		
 	enter_to_continue
 }

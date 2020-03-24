@@ -78,7 +78,7 @@ install_requirements() { # {{{
 	# install figlet to draw big ascii title
 	install_package 'figlet'
 
-	install_package 'vim xdg-user-dirs'
+	install_package 'xdg-user-dirs'
 }
 # }}}
 

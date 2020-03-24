@@ -140,7 +140,8 @@ create_user_account() { # {{{
 	mkdir Vidéos
 	mkdir Android
 	mkdir Aur
-	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur .conky .config
+	mkdir Itch
+	chmod -R 777 Bureau Documents Jeux 'Github Projects' Images Téléchargements Vidéos Android Aur Itch .conky .config
 		
 	enter_to_continue
 }

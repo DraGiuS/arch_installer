@@ -4,10 +4,6 @@
 </p>
 <h2 align="center">Archlinux Installer</h2>
     <p align="center">
-   An installer aimed for developers, people that want out of the box things
-    <br>
-    By archlinux user, for archlinux users
-</p>
    
  [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
 

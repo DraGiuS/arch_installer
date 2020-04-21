@@ -4,10 +4,6 @@
 </p>
 <h2 align="center">Archlinux Installer</h2>
     <p align="center">
-   An installer aimed for developers, people that want out of the box things
-    <br>
-    By archlinux user, for archlinux users
-</p>
    
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 

@@ -109,8 +109,6 @@ cd arch_installer
 
 * Added some packages, aur or not.. 
 
-* Support of snap packages by default
-
 * You can set up your android development easily 
 
 * Default setup of zsh with powerlevel9k
@@ -130,8 +128,6 @@ cd arch_installer
 * Changed default gtk theme
 
 * Alternative kernel (Xanmod Kernel/Fsync)
-
-* Vscode config
 
 * GOG Games
 

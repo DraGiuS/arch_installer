@@ -390,11 +390,8 @@ fi
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'trilium-bin mangohud spotirec-git clonehero spicetify-cli gtk3-nocsd-git m64py rivalcfg stuntrally-bin brackets-bin soundnode-youtube-dl deezloader-remix-bin ludo ttf-raleway snapd xpadneo-dkms-git recbox-ardour-theme-git lgogdownloader mandelbulber2-opencl-git plasma5-applets-volumewin7mixer ardour-git streamlink-twitch-gui pamac-aur yuzu-git citra-git cemu' # My stuff
-                        systemctl start snapd.socket
+			install_aur_package 'trilium-bin mangohud spotirec-git clonehero spicetify-cli gtk3-nocsd-git m64py rivalcfg stuntrally-bin brackets-bin soundnode-youtube-dl deezloader-remix-bin ludo ttf-raleway xpadneo-dkms-git recbox-ardour-theme-git lgogdownloader mandelbulber2-opencl-git plasma5-applets-volumewin7mixer ardour-git streamlink-twitch-gui pamac-aur yuzu-git citra-git cemu' # My stuff
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
-			systemctl enable snapd.socket
-			systemctl start snapd.socket
 			systemctl enable org.cups.cupsd.service    
 			sudo systemctl enable bluetooth.service
 			sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
@@ -613,14 +610,6 @@ ending_script() { # {{
     then 
     su "$USER" -c "./jumpstart.sh --catalina"
     fi
-    snap refresh
-    sleep 15 
-    systemctl enable apparmor
-    systemctl start apparmor
-    snap refresh
-    snap install zenkit
-    snap install guiscrcpy --edge
-    snap install gravit-designer
     su "$USER" -c "wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh"
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel

@@ -564,8 +564,8 @@ setup_bumblebee() { # {{
 setup_android_dev() { # {{
     print_info 'Your are going to set up an android selection of software for developing for this platform'
     read -p 'USER: ' USER
-    install_aur_package 'android-sdk android-studio'
-    install_aur_package 'genymotion unity-editor-beta-android'
+    install_aur_package 'android-sdk'
+    install_aur_package 'genymotion'
     
     export ANDROID_HOME=/opt/android-sdk
     groupadd sdkusers

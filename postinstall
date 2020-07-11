@@ -122,6 +122,7 @@ create_user_account() { # {{{
 	cp -r spoclo /home/"$USERNAME"/.conky/
         cp conky.desktop /home/"$USERNAME"/.config/autostart/
 	cp .zshrc /home/"$USERNAME"/
+	cp .xinitrc /home/"$USERNAME"/
 	cd .. 
 	cd ..
 	mkdir -p /home/"$USERNAME"/.local/share/color-schemes/
@@ -220,8 +221,8 @@ install_alternative() { # {{{
     read answer
     if [ "$answer" = 'y' ]
     then
-    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-5.5.10.arch1-1-x86_64.pkg.tar.xz
-    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-headers-5.5.10.arch1-1-x86_64.pkg.tar.xz
+    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-5.6.10.arch1-1-x86_64.pkg.tar.xz
+    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-headers-5.6.10.arch1-1-x86_64.pkg.tar.xz
     fi
     
 pacman -U *.pkg.tar.xz
@@ -282,13 +283,10 @@ setup_dotfiles() { # {{{
 
 install_display_manager() { # {{{
 	print_progress 'Install display manager'
-	install_package 'lightdm-webkit2-greeter'
+	install_package 'slim'
 	
-	systemctl enable lightdm
-	cd /usr/share/lightdm-webkit/themes/
-	git clone https://github.com/lassipulkkinen/lightdm-webkit2-theme
-        sed -i 's/antergos/lightdm-webkit2-theme/' /etc/lightdm/lightdm-webkit2-greeter.conf
-	sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+	systemctl enable slim
+        sed -i 's/default/bluesky/' /home/rimbaldien/slim.conf
 }
 # }}}
 
@@ -369,7 +367,6 @@ then
 install_aur_package 'fedora-firefox-wayland-bin'
 fi
                         install_package 'plasma-desktop plasma-wayland-session dolphin' # minimum plasma DE
-			install_package 'sddm' # display manager
 			install_package 'ark' # archive
 			install_package 'konsole yakuake' # terminal
 			install_package 'bluedevil' # bluetooth for KDE
@@ -378,13 +375,12 @@ fi
 			install_package 'kinfocenter neofetch' # see system information
 			install_package 'spectacle' # screenshot utility
 			install_package 'kcolorchooser' # color picker on desktop screen
-			install_package 'sddm-kcm' # sddm config gui for KDE
 			install_package 'qalculate-gtk' # calculator	
 			install_package 'plasma-vault' # encryption
 			install_package 'wget latte-dock qt5 kio-extras okular kdenlive plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
 	                install_package 'numlockx zeal python-pip unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libpng12 lib32-libpng12 blender xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris libretro-ppsspp libretro-citra libretro-mupen64plus-next steam obs-studio thunderbird dolphin-emu obs-studio' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 htmlcxx lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
-			install_package 'discord godot spotify' #andontie-aur
+			install_package 'discord spotify' #andontie-aur
 		        sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf # Fix the slow speed compilation
                         mount -o remount,size=18G /tmp/ # Fix the needed space to build big packages such as emulators	
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
@@ -613,8 +609,10 @@ ending_script() { # {{
     su "$USER" -c "wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh"
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
+    cp -r bluesky /usr/share/slim/themes
     cp enableFullscreen.js  ~/.config/spicetify/Extensions
     sudo cp hosts /etc/ 
+    
     su  "$USER" ./installapplet.sh
 
 	enter_to_continue

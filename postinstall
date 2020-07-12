@@ -122,7 +122,6 @@ create_user_account() { # {{{
 	cp -r spoclo /home/"$USERNAME"/.conky/
         cp conky.desktop /home/"$USERNAME"/.config/autostart/
 	cp .zshrc /home/"$USERNAME"/
-	cp .xinitrc /home/"$USERNAME"/
 	cd .. 
 	cd ..
 	mkdir -p /home/"$USERNAME"/.local/share/color-schemes/
@@ -286,7 +285,7 @@ install_display_manager() { # {{{
 	install_package 'slim'
 	
 	systemctl enable slim
-        sed -i 's/default/bluesky/' /home/rimbaldien/slim.conf
+        sed -i 's/default/bluesky/' /etc/slim.conf
 }
 # }}}
 
@@ -609,9 +608,12 @@ ending_script() { # {{
     su "$USER" -c "wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh"
     git clone https://github.com/dragius/skel /home/"$USER"/skel
     cd /home/"$USER"/skel
-    cp -r bluesky /usr/share/slim/themes
+    sudo cp -r bluesky /usr/share/slim/themes
     cp enableFullscreen.js  ~/.config/spicetify/Extensions
     sudo cp hosts /etc/ 
+    cd /etc/skel
+    cp .xinitrc /home/"$USERNAME"/
+
     
     su  "$USER" ./installapplet.sh
 

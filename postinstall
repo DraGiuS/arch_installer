@@ -613,7 +613,7 @@ ending_script() { # {{
     sudo cp hosts /etc/ 
     cd /etc/skel
     cp .xinitrc /home/"$USERNAME"/
-
+    cd /home/"$USER"/skel
     
     su  "$USER" ./installapplet.sh
 

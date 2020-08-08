@@ -339,11 +339,15 @@ install_desktop_environment() { # {{{
 	case "$DESKTOP_ENVIRONMENT" in
 		KDE)     
 		
-echo -n "Which version of firefox do you want ? (esr/beta/nightly/developer-edition/kde-opensuse/fedora-wayland): "
+echo -n "Which version of firefox do you want ? (esr/default/beta/nightly/developer-edition/kde-opensuse/fedora-wayland): "
 read answer
 if [ "$answer" = 'esr' ]
 then
 install_aur_package 'firefox-esr'
+
+elif [ "$answer" = 'default' ]
+then
+install_package 'firefox'
 
 elif [ "$answer" = 'beta' ]
 then
@@ -513,6 +517,7 @@ install_translation() { # {{{
         print_title 'TRANSLATION'
 	print_info 'type fr for french translation'
 	read -p 'Translation: ' TRANSLATION
+	install_package firefox-i18n-"$TRANSLATION"
 	install_package libreoffice-fresh-"$TRANSLATION"
 	install_package gimp-help-"$TRANSLATION"
 	

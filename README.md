@@ -56,9 +56,7 @@ check all cases
 
 # if you use wifi, if not, then check out the next part
 
-rfkill unblock all
-
-wifi-menu 
+https://wiki.archlinux.org/index.php/Iwd
 
 ```
 

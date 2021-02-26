@@ -109,7 +109,7 @@ spicetify update
 
 * Changed default gtk theme
 
-* Alternative kernel (Xanmod Kernel/Fsync)
+* Alternative kernel (Xanmod Kernel...)
 
 * GOG Games
 

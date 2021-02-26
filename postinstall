@@ -213,20 +213,13 @@ install_alternative() { # {{{
     read answer
     if [ "$answer" = 'y' ]
     then
-    wget https://github.com/DraGiuS/linux-precompiled/releases/download/4.19.79-rt/linux-xanmod-rt-4.19.79-1-x86_64.pkg.tar.xz
-    wget https://github.com/DraGiuS/linux-precompiled/releases/download/4.19.79-rt/linux-xanmod-rt-headers-4.19.79-1-x86_64.pkg.tar.xz
-    fi
-    echo -n "Do you want fsync kernel ? (y/n): "
-    read answer
-    if [ "$answer" = 'y' ]
-    then
-    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-5.6.10.arch1-1-x86_64.pkg.tar.xz
-    wget http://repo.steampowered.com/arch/valveaur/linux-fsync-headers-5.6.10.arch1-1-x86_64.pkg.tar.xz
+    wget https://aur.andontie.net/x86_64/linux-xanmod-5.9.1-1-x86_64.pkg.tar.zst
+    wget https://aur.andontie.net/x86_64/linux-xanmod-headers-5.9.1-1-x86_64.pkg.tar.zst
     fi
     
-pacman -U *.pkg.tar.xz
+pacman -U *.pkg.tar.zst
 grub-mkconfig -o /boot/grub/grub.cfg
-rm *.pkg.tar.xz
+rm *.pkg.tar.zst
 
 echo "Kernel succesfully installed"
 
@@ -314,11 +307,11 @@ set_desktop_environment() { # {{{
 
 kde_unstable() { # {{{
                 print_title 'KDE UNSTABLE'
-                print_info 'Andontie AUR for installing f*cking proprietary software... '
+                print_info 'Andontie AUR for installing proprietary software... '
 	       
 	        cp /root/arch_installer/pacman.conf /etc/pacman.conf
-                pacman-key --recv-key EA50C866329648EE 
-                pacman-key --lsign-key EA50C866329648EE 
+                pacman-key --recv-key B545E9B7CD906FE3 
+                pacman-key --lsign-key B545E9B7CD906FE3  
 		pacman -Syy
 }
 # }}}
@@ -380,7 +373,7 @@ fi
 			install_package 'kcolorchooser' # color picker on desktop screen
 			install_package 'qalculate-gtk' # calculator	
 			install_package 'plasma-vault' # encryption
-			install_package 'wget latte-dock qt5 kio-extras okular kdenlive plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
+			install_package 'wget latte-dock qt5 kio-extras okular plasma-browser-integration yarn powerdevil kde-gtk-config kio-gdrive kdeconnect kscreen' # like the package name say
 	                install_package 'numlockx zeal python-pip unrar virtualbox-host-dkms vlc virtualbox virtualbox-guest-dkms sshfs bullet cgal glib-perl gstreamermm gtkmm3 gtksourceview3 gtksourceviewmm js185 libgtop libxml++ perl-switch system-config-printer cups libpng12 lib32-libpng12 blender xdg-user-dirs qt5-websockets qt5-svg ocl-icd opencl-driver conky glu telegram-desktop hplip gparted qbittorrent linux-headers lutris libretro-ppsspp libretro-citra libretro-mupen64plus-next steam obs-studio thunderbird dolphin-emu obs-studio' # Stuff
 		        install_aur_package 'lib32-openssl-1.0 htmlcxx lib32-openal lib32-libcurl-compat lib32-libcurl-gnutls libcurl-gnutls' # Fix gog games, add LD_PRELOAD=libcurl.so.3 can fix some errors too 
 			install_package 'discord spotify' #andontie-aur
@@ -389,7 +382,7 @@ fi
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'trilium-bin mangohud spotirec-git clonehero spicetify-cli gtk3-nocsd-git m64py rivalcfg stuntrally-bin brackets-bin soundnode-youtube-dl deezloader-remix-bin ludo ttf-raleway xpadneo-dkms-git recbox-ardour-theme-git lgogdownloader mandelbulber2-opencl-git plasma5-applets-volumewin7mixer ardour-git pamac-aur yuzu-git citra-git cemu' # My stuff
+			install_aur_package 'mangohud spotirec-git spicetify-cli gtk3-nocsd-git m64py rivalcfg soundnode-youtube-dl deemix ludo ttf-raleway xpadneo-dkms-git recbox-ardour-theme-git lgogdownloader plasma5-applets-volumewin7mixer ardour-git pamac-aur yuzu-git citra-git cemu' # My stuff
                         cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
 			systemctl enable org.cups.cupsd.service    
 			sudo systemctl enable bluetooth.service

@@ -39,14 +39,14 @@ machine and setup and not guarantee to work on your computer. [aui][1] is more
 customizable, well maintained and have more options than my script anyway
 
 # Screenshot 
-
-                                                Here, the slim theme that you will get : 
+  
+                                                           Here, the slim theme that you will get : 
 
 <img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot1.png width="850"/>
 
-                                                Currently, the desktop look like this : 
+                                                      Currently, the desktop look like this : 
 
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.png width="800"/>
+<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.png width="850"/>
 
 # Detail
 

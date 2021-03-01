@@ -42,7 +42,7 @@ customizable, well maintained and have more options than my script anyway
 
                                                 Here, the slim theme that you will get : 
 
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot1.png width="520"/>
+<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot1.png width="680"/>
 
 Currently, the desktop look like this : 
 

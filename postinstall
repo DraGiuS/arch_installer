@@ -382,8 +382,7 @@ fi
 			wget https://github.com/DraGiuS/Yarock-PKGBUILD/releases/download/1.4.0/yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			pacman -U yarock-qt5-1.4.0-1-x86_64.pkg.tar.xz
 			rm *.pkg.tar.xz
-			install_aur_package 'mangohud spotirec-git spicetify-cli gtk3-nocsd-git m64py rivalcfg soundnode-youtube-dl deemix ludo ttf-raleway xpadneo-dkms-git recbox-ardour-theme-git lgogdownloader plasma5-applets-volumewin7mixer ardour-git pamac-aur yuzu-git citra-git cemu' # My stuff
-                        cp /usr/share/ardour5/themes/recbox-ardour.colors /usr/share/ardour6/themes #Install ardour theme
+			install_aur_package 'mangohud spotirec-git spicetify-cli gtk3-nocsd-git m64py rivalcfg soundnode-youtube-dl deemix ludo ttf-raleway xpadneo-dkms-git lgogdownloader plasma5-applets-volumewin7mixer ardour-git pamac-aur yuzu-git citra-git cemu' # My stuff
 			systemctl enable org.cups.cupsd.service    
 			sudo systemctl enable bluetooth.service
 			sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf

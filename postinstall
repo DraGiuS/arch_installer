@@ -307,7 +307,7 @@ set_desktop_environment() { # {{{
 
 kde_unstable() { # {{{
                 print_title 'KDE UNSTABLE'
-                print_info 'Andontie AUR for installing proprietary software... '
+                print_info 'Andontie AUR for installing proprietary software..., Kde unstable in the pacman.conf option'
 	       
 	        cp /root/arch_installer/pacman.conf /etc/pacman.conf
                 pacman-key --recv-key B545E9B7CD906FE3 

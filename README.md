@@ -81,6 +81,10 @@ cd "$(dirname "$(spicetify -c)")/Themes"
 git clone https://github.com/khanhas/google-spicetify
 spicetify config current_theme google-spicetify; spicetify config color_scheme gow; spicetify apply
 spicetify update
+
+* If you wish to start plasma then # all the twm stuff etc., in the xinitrc file
+
+
 ```
 
 # MyChanges

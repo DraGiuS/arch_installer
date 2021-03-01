@@ -40,11 +40,11 @@ customizable, well maintained and have more options than my script anyway
 
 # Screenshot 
 
-                                                                    Here, the slim theme that you will get : 
+                                                Here, the slim theme that you will get : 
 
 <img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot1.png width="520"/>
 
-                                                                    Currently, the desktop look like this : 
+Currently, the desktop look like this : 
 
 <img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.jpg width="960"/>
 

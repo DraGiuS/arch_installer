@@ -46,7 +46,7 @@ customizable, well maintained and have more options than my script anyway
 
                                                 Currently, the desktop look like this : 
 
-<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.png width="850"/>
+<img src=https://raw.githubusercontent.com/DraGiuS/arch_installer/master/screenshot.png width="800"/>
 
 # Detail
 

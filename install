@@ -281,7 +281,7 @@ configure_mirrorlist() { # {{{
 			sed -i 's/^#Server/Server/g' "$tmpfile"
 			;;
 		'sort by download speed')
-			reflector --verbose --connection-timeout 3 --latest 200 --number 40 --sort rate --save "$tmpfile"
+			reflector --verbose --connection-timeout 3 --latest 50 --number 40 --sort rate --save "$tmpfile"
 			;;
 		*)
 			invalid_option

@@ -11,6 +11,7 @@ MIRRORLIST='sort by download speed'
 # }}}
 # PARTITION {{{
 DEVICE='/dev/sda'
+#DEVICE='/dev/nvme0'
 
 BOOT_PARTITION=''
 ROOT_PARTITION=''

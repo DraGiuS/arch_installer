@@ -318,6 +318,7 @@ install_base() { # {{{
 	pacstrap "$MOUNTPOINT" dialog networkmanager # if you use wifi in the live system, you will also need this
 
 	print_progress 'setup network for the new system'
+        arch_chroot "systemctl enable iwd.service"
 	arch_chroot "systemctl enable NetworkManager.service"
 	
 	enter_to_continue

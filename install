@@ -315,7 +315,7 @@ install_base() { # {{{
 	rm "$MOUNTPOINT/boot/vmlinuz-linux" 2> /dev/null
 
 	pacstrap "$MOUNTPOINT" base base-devel nano iwd linux-lts linux-lts-headers linux-firmware
-	pacstrap "$MOUNTPOINT" dialog networkmanager # if you use wifi in the live system, you will also need this
+	pacstrap "$MOUNTPOINT" dialog wpa_supplicant networkmanager # if you use wifi in the live system, you will also need this
 
 	print_progress 'setup network for the new system'
         arch_chroot "systemctl enable iwd.service"

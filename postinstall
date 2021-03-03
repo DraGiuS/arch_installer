@@ -332,7 +332,7 @@ install_desktop_environment() { # {{{
 	case "$DESKTOP_ENVIRONMENT" in
 		KDE)     
 		
-echo -n "Which version of firefox do you want ? (esr/default/beta/nightly/kde-opensuse/fedora-wayland): "
+echo -n "Which version of firefox do you want ? (esr/default/beta/nightly/developer-edition/kde-opensuse/fedora-wayland): "
 read answer
 if [ "$answer" = 'esr' ]
 then
@@ -349,6 +349,11 @@ install_aur_package 'firefox-beta-bin-all-localizations'
 elif [ "$answer" = 'nightly' ]
 then
 install_aur_package 'firefox-nightly'
+
+elif [ "$answer" = 'developer-edition' ]
+then
+install_package 'firefox-developer-edition'
+
 
 elif [ "$answer" = 'kde-opensuse' ]
 then
